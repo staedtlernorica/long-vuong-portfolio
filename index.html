@@ -1,14 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Long's Site</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Roboto:wght@100;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/1d5ad86397.js" crossorigin="anonymous"></script>
+
+    <!-- DEVICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 </head>
+
 <body>
-    <h1>My Portfolio</h1>
-    <h2>Coming soon</h2>
+
+    <header>
+        <div class="wrapper">
+            <div class="navAndDarkMode">
+                <button>
+                    <nav>
+                        <i class="fas fa-bars"></i>
+                    </nav>
+                </button>
+                <button>
+                    <i class="far fa-moon"></i>
+                </button>
+            </div>
+
+            <div class="nameAndTitle">
+                <h1>Long Vuong</h1>
+                <h3>Front End Web Developer</h3>
+            </div>
+            <div class="introBlurbAndSocialIcons">
+                <h4>I'm a front end developer based in Toronto. I also enjoy coming up with unconventional, yet still
+                    intuitive
+                    designs to hone my creativity skills.</h4>
+                <ul class="socialIcons">
+                    <li><a href="https://github.com/staedtlernorica"><i class="fab fa-github fa-2x"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+                    <li><a href="https://ca.linkedin.com/in/long-vuong-bb40a8164"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
+                    </li>
+                </ul>
+
+                <img src="assets/headshot.png" alt="Headshot of me">
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about">
+            <div class="wrapper">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero deleniti sunt delectus omnis
+                    dolorum!
+                    Dignissimos!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati corrupti animi aspernatur, sequi
+                    cupiditate doloribus, repellat dolor cum vel quae perspiciatis, modi eveniet non sint corporis nobis
+                    porro earum commodi itaque autem excepturi laborum doloremque. Harum reprehenderit ea ipsa
+                    laudantium.
+                </p>
+                <a href="#resume">
+                    <button>
+                        My Resume
+                    </button>
+                </a>
+                <a href="#demos">
+                    <button>
+                        My Projects
+                    </button>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="resume" id="resume">
+            <div class="wrapper">
+                <h2>My Resume</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sit voluptatibus earum culpa
+                    deserunt
+                    assumenda soluta reiciendis ut velit inventore quam, excepturi et cum, dolore esse laborum dolores
+                    eaque
+                    fuga dolorem vero reprehenderit minima unde aperiam. Aspernatur molestias fugit dolore beatae ipsa!
+                    Consectetur, esse dolore!</p>
+                <h3>Skills</h3>
+                <div class="skillsGrid">
+                    <div class="icon-container">
+                        <i class="devicon-html5-plain"></i>
+                        <h4>HTML</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-css3-plain"></i>
+                        <h4>CSS</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-javascript-plain"></i>
+                        <h4>Javascript</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-jquery-plain-wordmark"></i>
+                        <h4>jQuery</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-sass-original"></i>
+                        <h4>SASS</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-react-original"></i>
+                        <h4>React</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-python-plain"></i>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-git-plain"></i>
+                        <h4>Git</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-github-plain"></i>
+                        <h4>GitHub</h4>
+                    </div>
+                </div>
+
+                <div class="expertise">
+                    <h3>Expertise</h3>
+                    <h4>Accessibility</h4>
+                    <h4>Paired Programing</h4>
+                    <h4>UX Design</h4>
+                    <h4>PSD Conversion</h4>
+                </div>
+
+                <button>Download Resume</button>
+            </div>
+        </section>
+
+        <!-- <section> -->
+        <section class="demos" id="demos">
+            <div class="wrapper">
+
+                <h2>Projects & Demos</h2>
+                <p>Here you can find my projects, ordered stochastically.</p>
+
+                <!-- TEMPLATE FOR PROJECTS
+
+                    <section class=" demo">
+                    <h3>Title</h3>
+                    <p>Given two of time/distance/pace, will calculate the remaining quantity. Seamlessly switch
+                        between
+                        metric and imperial units at the click of a button, rather than having to reset the calculator after every new input.</p>
+                    <div class="buttons">
+                        <button><a href="">Check It
+                                Live</a></button>
+                        <button><a href="">Github</a></button>
+                    </div>
+                </section>
+
+                 -->
+
+                <section class="trivia-quiz demo">
+                    <h3>Trivia Quiz Webpage</h3>
+                    <p>Retrieve trivia questions from a trivia database API that matches user's input settings, and
+                        run
+                        the questions through a trivia quiz UI (think "Who Wants to be a Millionaire").</p>
+                    <div class="buttons">
+                        <button><a href="https://staedtlernorica.github.io/JS-quiz/">Check It Live</a></button>
+                        <button><a href="https://github.com/staedtlernorica/JS-quiz">Github</a></button>
+
+                    </div>
+                </section>
+
+                <section class="running-calculator demo">
+                    <h3>Running Calculator</h3>
+                    <p>Given two of time/distance/pace, will calculate the remaining quantity. Seamlessly switch
+                        between
+                        metric and imperial units at the click of a button, rather than having to reset the calculator
+                        after every new input.</p>
+                    <div class="buttons">
+                        <button><a href="https://staedtlernorica.github.io/runner-calculator/">Check It
+                                Live</a></button>
+                        <button><a href="https://github.com/staedtlernorica/runner-calculator">Github</a></button>
+                    </div>
+                </section>
+
+                <section class="python-youtube demo">
+                    <h3>Youtube Playlist/Channel Statistics Scraper</h3>
+                    <p>Using the Youtube API, retrieve quantitative data of all videos from a playlist/uploaded by a
+                        channel as specified by the user given URL. Outputs the retrieved data into a .CSV file.</p>
+                    <p>My proudest project yet, since I worked on this by myself (with the help of Google and
+                        Stackoverflow of course).
+                        It
+                        even has some crude redundancy features to help users avoid simple errors. I even made it
+                        into a
+                        GUI with "tkinter", rather than leaving it as a console script.</p>
+                    <div class="buttons">
+                        <button class="greyOut"><a href="#/">Check It Live</a></button>
+                        <button><a
+                                href="https://github.com/staedtlernorica/Youtube-Video-Statistics-Scraper">Github</a></button>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+        <!-- </section> -->
+
+        <section class="contact" id="contact">
+            <div class="wrapper">
+
+                <h2>Contact Me</h2>
+
+                <div class="infoAndForm">
+                    <div class="contactInfo">
+                        <div class="info">
+                            <i class="fas fa-mobile"></i>
+                            <h4>123-456-7890</h4>
+                        </div>
+                        <div class="info">
+                            <i class="far fa-envelope"></i>
+                            <h4>longvuong@live.com</h4>
+                        </div>
+                        <div class="info">
+                            <i class="far fa-envelope"></i>
+                            <h4>long.t.vuong@gmail.com</h4>
+                        </div>
+                        <ul class="socialIcons">
+                            <li><a href="https://github.com/staedtlernorica"><i class="fab fa-github fa-2x"></i></a>
+                            </li>
+                            <li><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+                            <li><a href="https://ca.linkedin.com/in/long-vuong-bb40a8164"><i
+                                        class="fab fa-linkedin fa-2x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form action="">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="wrapper">
+            <h4>© 2021 <a href="https://longvuong.ca/">longvuong.ca</a>. All Rights Reserved</h4>
+            <h4>Designed with the help of WebDuck</h4>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
+
 </html>
