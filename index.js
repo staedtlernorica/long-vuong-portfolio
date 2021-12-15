@@ -23,15 +23,15 @@ var currentScrollPos = window.pageYOffset;
 function isElementInViewport () {
 
     const topBar = document.querySelector('.navAndDarkMode')
-    const resumeSection = document.querySelector('section.resume');
+    const resumeSection = document.querySelector('section.skills');
     const contactSection = document.querySelector('section.contact');
 
     var rect1 = resumeSection.getBoundingClientRect();
     var rect2 = contactSection.getBoundingClientRect();
     
-    // 
-    (rect1.top < 55 && rect1.bottom > 55) || (rect2.top < 55) ?
-    topBar.style.backgroundColor = 'rgba(232, 190, 163, 0.98)' :
-    topBar.style.backgroundColor = 'rgba(254, 250, 224, 0.98)';
+    // no more negative margins h2 so now just have 0 instead of 55
+    (rect1.top < 0 && rect1.bottom > 0) || (rect2.top < 0) ?
+    topBar.style.backgroundColor = 'rgba(232, 190, 163, 0.97)' :
+    topBar.style.backgroundColor = 'rgba(254, 250, 224, 0.97)';
 }
 
