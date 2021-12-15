@@ -232,7 +232,8 @@ ul {
 }
 
 li {
-    display: inline-block;
+    /* display: inline-block; */
+    display: block;
 }
 
 a,
@@ -258,9 +259,10 @@ button {
     font-weight: 500;
 }
 
-button:hover,
-button:active,
-button:focus {
+/* will mess with navAndDarkMode, making them manilla colored */
+/* button:focus, */
+/* button:active, */
+button:hover{
     background: rgba(0, 0, 0, 0.5);
     color: #fefae0;
 }
@@ -308,7 +310,6 @@ p {
     margin-top: 0;
 }
 
-
 /* =================HEADER========================= */
 
 header {
@@ -331,15 +332,16 @@ header .wrapper {
     font-size: 2rem;
     padding: 10px 0;
     width: 100%;
-    transition: top 0.2s linear;
     top: 0px;
     background-color: #fefae0;
-    z-index: 10;
+    z-index: 1000;
+    transition: border 0.1s ease, top 0.2s linear;
 }
 
-.navAndDarkMode .wrapper{
+.navAndDarkMode .wrapper {
     display: flex;
     justify-content: flex-end;
+    z-index: 1000;
 }
 
 .navAndDarkMode button {
@@ -348,19 +350,49 @@ header .wrapper {
     margin: 0;
     margin-left: 20px;
     padding: 0;
-    transition: transform 0.2s linear;
 }
 
-.navAndDarkMode button:hover,
-.navAndDarkMode button:focus,
-.navAndDarkMode button:focus-within,
-.navAndDarkMode button:active {
+.navAndDarkMode i{
+    transition: transform 0.3s linear;
+}
+
+/* .navAndDarkMode button:focus,
+.navAndDarkMode button:focus-within, */
+.navAndDarkMode button:hover{
     color: #222;
-    transform: translate(0, 10px);;
+    /* transform: translate(0, 10px); */
 }
 
-.navAndDarkMode button:last-child:focus {
-    transform: rotate(90deg);
+nav ul{
+    /* flex-direction: column; */
+    position: fixed;
+
+
+    right: 10%;
+    background-color: rgba(254, 250, 224, 0.97);
+    border: 3.5px solid rgb(172, 172, 172);
+    border-top: rgba(254, 250, 224, 1);
+    border-radius: 0 0 20px 20px;
+
+    top: -180px;
+    color: transparent;
+    transition: color 0.4s linear, top .2s ease-in, border 0.2s ease-out;
+    z-index: -10;
+    border: transparent 0px solid;
+}
+
+/* so when wrapper reach a max-width of 900px dropdown menu still appears to stay inline with the wrapper*/
+@media(min-width:1142px){
+    nav ul{
+        right: calc((100% - 900px) / 2);
+    }
+}
+
+nav li{
+    padding: 10px 15px;
+    width: 100%;
+    text-align: right;
+    z-index: -10;
 }
 
 .nameAndTitle {
@@ -379,8 +411,7 @@ header h4 {
     font-size: 1.25rem;
     font-weight: normal;
     margin-bottom: 30px;
-    max-width: 350px;
-    min-width: 350px;
+    width: 290px;
 }
 
 .introBlurbAndSocialIcons {
@@ -407,7 +438,7 @@ header h4 {
 
 .introBlurbAndSocialIcons img {
     border: 6px solid #222;
-    border-radius: 10% 15% 20% 25%;
+    border-radius: 7% 10% 15% 25%;;
     max-width: 230px;
     margin: 30px 0;
 }
@@ -441,13 +472,13 @@ section {
     padding-bottom: 50px;
 }
 
-.skills .wrapper{
+.skills .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.skills h2{
+.skills h2 {
     align-self: flex-start;
 }
 
@@ -466,7 +497,6 @@ section {
     border-radius: 12px;
     padding: 20px 0;
     margin: 30px 0;
-
 }
 
 .skills h4 {
@@ -476,14 +506,14 @@ section {
     font-weight: 500;
 }
 
-.skillsGridAndMore{
+.skillsGridAndMore {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 700px;
-} 
+}
 
-.skillsGridAndMore h4{
+.skillsGridAndMore h4 {
     align-self: flex-end;
 }
 
@@ -491,13 +521,11 @@ section {
     font-size: 4rem;
 }
 
-
-@media(min-width: 767px){
-    .skillsGrid{
+@media (min-width: 767px) {
+    .skillsGrid {
         padding: 30px 20px;
     }
 }
-
 
 /* ===============DEMOS========================= */
 .demos {
@@ -563,27 +591,28 @@ section {
     flex-direction: column;
 }
 
-.contact h2 {
-    /* margin: -69px 0 50px 0; */
+.contact h3 {
+    margin: -30px 0 20px 10px;
+    background-color: #e8bea3;
+    width: 260px;
+    text-align: center;
 }
 
 .infoAndForm {
     display: flex;
     flex-direction: column;
-
-    align-self: flex-end;
     width: 100%;
     transition: all 0.2s linear;
 }
 
 .contactInfo {
-    width: 350px;
-    max-height: 175px;
+    width: 325px;
+    max-height: 200px;
     padding: 10px;
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    margin: 20px 0 20px 15px;
+    margin: 0px 0 20px 15px;
     border: 2px solid #222;
     border-radius: 12px;
     box-shadow: 7px 10px #2222229e;
@@ -598,7 +627,7 @@ section {
     margin-bottom: 15px;
 }
 
-.info > * {
+.info i{
     margin-right: 35px;
 }
 
@@ -608,16 +637,21 @@ section {
 }
 .contact label {
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .contact i {
     font-size: 2.25rem;
 }
 
+form{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 form > *:not(button) {
     display: block;
-    width: 100%;
-    margin-bottom: 10px;
 }
 
 input,
@@ -626,26 +660,27 @@ textarea {
     border: 2px solid #222;
     border-radius: 10px;
     padding: 15px 25px;
+    margin-bottom: 20px;
     resize: none;
     font-size: 1.25rem;
     background: rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px;
     box-shadow: 4px 6px #2222229e;
 }
 
-@media (min-width: 967px) {
+@media (min-width: 838px) {
     .infoAndForm {
         flex-direction: row-reverse;
         justify-content: space-evenly;
     }
 
     .contactInfo {
-        margin-top: 30px;
-        margin-left: 50px;
+        margin: 15px 0 0 40px;
     }
 
     form {
-        flex-grow: 1;
+        /* flex-grow: 1; */
     }
 }
 
