@@ -382,7 +382,8 @@ nav ul{
     right: 10%;
     background-color: rgba(254, 250, 224, 0.97);
     border: 3.5px solid rgb(172, 172, 172);
-    border-top: rgba(254, 250, 224, 1);
+    /* border-top: rgba(254, 250, 224, 1); */
+    border-top: none;
     border-radius: 25px 0 20px 10px;
 
     top: -190px;
@@ -474,12 +475,12 @@ section {
 /* ================ABOUT======================= */
 .about {
     padding: 0 0 25px 0;
-    background-color: #fefae0;
+    /* background-color: #fefae0; */
 }
 
 /* =================RESUME===================== */
 .skills {
-    background: #e8bea3;
+    /* background: #e8bea3; */
     padding-bottom: 50px;
 }
 
@@ -540,7 +541,7 @@ section {
 
 /* ===============DEMOS========================= */
 .demos {
-    background: #fefae0;
+    /* background: #fefae0; */
     padding-bottom: 100px;
 }
 
@@ -594,7 +595,7 @@ section {
 
 /* ==================CONTACT=================== */
 .contact {
-    background: #e8bea3;
+    /* background: #e8bea3; */
     padding-bottom: 100px;
 }
 .contact .wrapper {
@@ -707,7 +708,7 @@ textarea {
 footer {
     padding: 25px 0;
     text-align: center;
-    background: #faedcd;
+    /* background: #faedcd; */
 }
 
 footer h4 {

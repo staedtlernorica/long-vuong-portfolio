@@ -49,16 +49,16 @@ function isElementInViewport() {
     (
       navUl.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
       topBar.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
-      navButtons.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
-      // hamburgerBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
-      // moonBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
+      // navButtons.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
+      hamburgerBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
+      moonBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
       ) :
     (
       navUl.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
       topBar.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
-      navButtons.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
-      // hamburgerBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
-      // moonBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
+      // navButtons.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
+      hamburgerBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
+      moonBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
       )
 }
 
@@ -98,6 +98,7 @@ function handleNavButton(button) {
       : (button.target.style.transform = 'rotate(90deg)',
         navUl.style.top = '26.8px',
         navUl.style.border = '3px solid rgb(172, 172, 172)',
+        // navUl.style.borderTop = 'none',
         navUl.style.color = '#222',
         moon.style.backgroundColor = topBarColor,
         hamb.style.backgroundColor = topBarColor)
