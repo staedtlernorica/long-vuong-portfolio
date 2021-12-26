@@ -15,7 +15,7 @@ window.onscroll = function () {
 
   const mobileMenuOpened = document.querySelector('nav ul').style.top === '26.8px'
 
-  isElementInViewport();
+  // isElementInViewport();
 
   if (prevScrollpos > currentScrollPos) {
     document.getElementsByClassName("navAndDarkMode")[0].style.top = "0";
@@ -35,11 +35,7 @@ function isElementInViewport() {
 
   const resumeSection = document.querySelector('section.skills');
   const contactSection = document.querySelector('section.contact');
-  const topBar = document.querySelector('.navAndDarkMode')
-  const navUl = document.querySelector('nav ul');
-  const navButtons = document.querySelector('.buttons');
-  const moonBtn = document.querySelectorAll('.navAndDarkMode button')[0]
-  const hamburgerBtn = document.querySelectorAll('.navAndDarkMode button')[1]
+
 
   var rect1 = resumeSection.getBoundingClientRect();
   var rect2 = contactSection.getBoundingClientRect();
@@ -47,18 +43,10 @@ function isElementInViewport() {
   // no more negative margins h2 so now just have 0 instead of 55
   (rect1.top < 0 && rect1.bottom > 0) || (rect2.top < 0) ?
     (
-      navUl.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
-      topBar.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
-      // navButtons.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
-      hamburgerBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)',
-      moonBtn.style.backgroundColor = 'rgba(232, 190, 163, 0.98)'
+     console.log(1)
       ) :
     (
-      navUl.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
-      topBar.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
-      // navButtons.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
-      hamburgerBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)',
-      moonBtn.style.backgroundColor = 'rgba(254, 250, 224, 0.99)'
+      console.log(2)
       )
 }
 
@@ -73,9 +61,6 @@ document.querySelectorAll('.navAndDarkMode i').forEach((button) => {
 
 function handleNavButton(button) {
 
-  const topBarColor = document.querySelector('.navAndDarkMode').style.backgroundColor;
-  const moon = document.querySelectorAll('.navAndDarkMode button')[0]
-  const hamb = document.querySelectorAll('.navAndDarkMode button')[1]
   const navUl = document.querySelector('nav ul')
 
   if (button.target.className.includes('moon')) {
@@ -92,15 +77,10 @@ function handleNavButton(button) {
       ? (button.target.style.transform = 'rotate(0deg)',
         navUl.style.color = 'transparent',
         navUl.style.border = '3px solid transparent',
-        navUl.style.top = '-200px',
-        moon.style.backgroundColor = '',
-        hamb.style.backgroundColor = '')
+        navUl.style.top = '-200px')
       : (button.target.style.transform = 'rotate(90deg)',
         navUl.style.top = '26.8px',
-        navUl.style.border = '3px solid rgb(172, 172, 172)',
-        // navUl.style.borderTop = 'none',
-        navUl.style.color = '#222',
-        moon.style.backgroundColor = topBarColor,
-        hamb.style.backgroundColor = topBarColor)
+        navUl.style.border = '3px solid rgba(0,0,0,0.75)',
+        navUl.style.color = '#222')
   }
 }
