@@ -24,7 +24,7 @@
 
 <body>
 
-    <header>
+    <header id="banner">
         <div class="navAndDarkMode">
             <div class="wrapper">
                 <!-- <div class="buttons"> -->
@@ -76,10 +76,20 @@
         </div>
     </header>
 
+    <!-- TOO PERFORMANT INTENSIVE -->
+    <!-- <aside class="pageIndicator">
+        <ul>
+            <li><a href="#banner"><i class="far fa-circle"></i></a></li>
+            <li><a href="#about"><i class="far fa-circle"></i></a></li>
+            <li><a href="#demos"><i class="far fa-circle"></i></a></li>
+            <li><a href="#miscDemo"><i class="far fa-circle"></i></a></li>
+        </ul>
+    </aside> -->
     <aside class="pageIndicator">
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle"></i>
+        <ul>
+            <li><i class="fas fa-angle-double-up"></i></li>
+            <li><i class="fas fa-angle-double-down"></i></li>
+        </ul>
     </aside>
 
 
@@ -93,7 +103,7 @@
                     flexibility, personal philosophy informs me fail fast, do the most with the simplest</p> -->
 
                 <p>I'm a web developer in Toronto, with a focus on the programming side of things (though I'm pretty
-                    good at CSS, too!). My approach is centered on the paradigms of responsive
+                    good at CSS, too!). My approach is centered around the paradigms of responsive
                     design, functional and modular programming. I've chosen a few <a href="">Featured Projects</a> below
                     to highlight my approach and strengths as a developer.
                 </p>
@@ -102,7 +112,7 @@
                     Coming from a math background, I'm also deeply interested in web dev concepts that involves ...
                     math!, such as code efficiency, algorithms and data structure. I'm currently finding ways to apply
                     these concepts in my projects in order to improve my grasp on them, as well as expanding my toolbox
-                    in general. (Which you can take a quick glance at right underneath.)</p>
+                    in general.</p>
 
                 <!-- <p>
                     I'm
@@ -115,22 +125,12 @@
                     whether it's through helping them find careers
                     in this space, or just simply inspire them to make a positive impact on something so influential in our world!</p> -->
 
-                <div class="styleHr">
-                    <hr class="hr1">
-                    <hr class="hr2">
-                    <hr class="hr3">
-                </div>
 
-
-                <div class="toolHeader">
+                <!-- <div class="toolHeader">
                     <h3>My toolbox</h3>
                     <i class="fas fa-toolbox"></i>
-                </div>
-
+                </div> -->
                 <div class="bothstacks">
-
-
-
                     <!-- <h3>My skills at a glace:</h3> -->
                     <div class="techstack">
                         <h4>Currently using:</h4>
@@ -248,7 +248,7 @@
                     <hr class="hr3">
                 </div>
 
-                <div class="miscDemo">
+                <div class="miscDemo" id="miscDemo">
                     <h2>Miscellaneous Projects</h2>
                     <p>These smaller projects were written mostly for fun and practice. These snapshots of my skills
                         highlight how far I've come in just a year.</p>
@@ -289,27 +289,33 @@
             </div>
         </section>
 
+        <div class="styleHr">
+            <hr class="hr1">
+            <hr class="hr2">
+            <hr class="hr3">
+        </div>
+
         <section class="contact" id="contact">
             <div class="wrapper">
 
                 <!-- <img src="assets/headshot.png" alt="Headshot of me"> -->
 
-
+                <h3>Get in touch with me via:</h3>
                 <div class="contactInfo">
-                    <h3>Get In Touch!</h3>
-                    <ul class="socialIcons">
-                        <li><a href="https://github.com/staedtlernorica"><i
-                                    class="devicon-github-original colored"></i></a></li>
-                        <li><a href=""><i class="devicon-twitter-original colored"></i></a></li>
-                        <li><a href="https://ca.linkedin.com/in/long-vuong-bb40a8164"><i
-                                    class="devicon-linkedin-plain colored"></i></a>
-                        </li>
-                    </ul>
-                    <button>
-                        <a href="mailto:longvuong@live.com">
-                            Email Me
-                        </a>
-                    </button>
+                    <div class="contactButtons">
+                        <button>
+                            <a href="https://calendly.com/longvuong">
+                                Calendly
+                            </a>
+                        </button>
+                        <button>
+                            <a href="mailto:longvuong@live.com">
+                                Email
+                            </a>
+                        </button>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -328,9 +334,22 @@
 
     <footer>
         <div class="wrapper">
-            <h4>© 2021 <a href="https://longvuong.ca/">longvuong.ca</a></h4>
-            <h4>Designed in part with WebDuck</h4>
+            
+            <!-- <h4>Designed in part with WebDuck</h4> -->
+
+            <ul class="socialIcons">
+                <li><a href="https://github.com/staedtlernorica"><i
+                            class="devicon-github-original colored"></i></a></li>
+                <li><a href=""><i class="devicon-twitter-original colored"></i></a></li>
+                <li><a href="https://ca.linkedin.com/in/long-vuong-bb40a8164"><i
+                            class="devicon-linkedin-plain colored"></i></a>
+                </li>
+            </ul>
+
+            <h4>© 2021 <a href="https://longvuong.ca/"></a></h4>
         </div>
+
+        
     </footer>
 
     <script src="index.js"></script>

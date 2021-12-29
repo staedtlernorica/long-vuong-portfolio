@@ -6,7 +6,8 @@
 // http://jsfiddle.net/n9uuv0hd/80/
 
 
-isElementInViewport();
+// REMOVED; 4 DOTS VERSION TOO PERFORMANT INTENSIVE
+// isElementInViewport();
 
 // ILL GOTTEN GAIN FROM W3SCHOOL EXAMPLE
 var prevScrollpos = window.pageYOffset;
@@ -15,7 +16,7 @@ window.onscroll = function () {
 
   const mobileMenuOpened = document.querySelector('nav ul').style.top === '26.8px'
 
-  isElementInViewport();
+
 
   if (prevScrollpos > currentScrollPos) {
     document.getElementsByClassName("navAndDarkMode")[0].style.top = "0";
@@ -31,38 +32,33 @@ window.onscroll = function () {
 
 // https://stackoverflow.com/a/7557433/6030118
 
-function isElementInViewport() {
 
-  const navDots = document.querySelectorAll('.pageIndicator i')
-  const navDot0 = navDots[0];
-  const navDot1 = navDots[1];
-  const navDot2 = navDots[2];
-
-  const rect1 = document.querySelector('header').getBoundingClientRect();
-  const rect2 = document.querySelector('#demos').getBoundingClientRect();
-  const rect3 = document.querySelector('#contact').getBoundingClientRect()
+document.querySelectorAll('.pageIndicator i').forEach((button) => {
+  button.addEventListener('click', event => {
+    scrollToPx(event)
+  })
+})
 
 
-  // chain these together so they feed into one another instead of two of them having to handshake
-
-  rect1.bottom > 320 ?
-    navDot0.className = 'fas fa-circle' :
-    navDot0.className = 'far fa-circle'
-
-  rect2.top < 380 && rect2.bottom > 480 ?
-    navDot1.className = 'fas fa-circle' :
-    navDot1.className = 'far fa-circle'
-
-  rect3.top < 520 ?
-    navDot2.className = 'fas fa-circle' :
-    navDot2.className = 'far fa-circle'
+function scrollToPx(event) {
 
 
+  const pxFromTop = document.querySelector('body').getBoundingClientRect().top;
+
+  const breakpoints = [0, -680, -1470, -3580, -4707]
+
+  let temp = [...breakpoints, pxFromTop].sort(function (a, b) { return a - b; }).reverse();
+
+  temp = [...new Set(temp)]
+
+  const index = temp.indexOf(pxFromTop)
+
+
+  event.target.className === 'fas fa-angle-double-up' ?
+    window.scrollTo(0, temp[index - 1] * -1) :
+    window.scrollTo(0, temp[index + 1] * -1)
 
 }
-// const r2t = document.querySelector('#demos').getBoundingClientRect()['top'];
-// const r2b = document.querySelector('#demos').getBoundingClientRect()['bottom'];
-// const r2 = [r2t, r2b]
 
 
 document.querySelectorAll('.navAndDarkMode i').forEach((button) => {
