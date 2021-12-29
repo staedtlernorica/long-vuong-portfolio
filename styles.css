@@ -225,6 +225,10 @@ template {
     max-width: 700px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -232,7 +236,6 @@ ul {
 }
 
 li {
-    /* display: inline-block; */
     display: block;
 }
 
@@ -245,11 +248,9 @@ a:visited {
 }
 
 a:hover,
-a:focus{
+a:focus {
     opacity: 0.7;
 }
-
-
 
 body {
     font-size: 100%;
@@ -259,20 +260,18 @@ body {
     background-color: #fefae0;
 }
 
-h1{
-    font-family: "Lora", serif;
-    margin: 0;
-    padding: 0;
-}
+h1,
 h2,
 h3,
-h4 {
-    font-family: "Roboto", serif;
+h4,
+p {
     margin: 0;
     padding: 0;
+    font-weight: 400;
 }
 
 h1 {
+    font-family: "Lora", serif;
     font-size: 4.5rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -282,35 +281,34 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    font-weight: normal;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
-h3 {
+h3,
+li {
     font-size: 2rem;
-    font-weight: normal;
-    font-family: "Roboto", sans-serif;
 }
 
-h4{
+h4 {
     font-size: 1.25rem;
-    font-weight: normal;
 }
 
 p {
     font-size: 1.15rem;
     font-weight: 300;
     line-height: 1.25;
-    letter-spacing: 1px;
-    margin-top: 0;
+    letter-spacing: 0.25px;
+    margin: 10px 0 20px 0;
+}
+
+i{
+    font-size: 2rem;
 }
 
 /* =================HEADER========================= */
 
 header {
-    
-    padding: 20px 0;
-    padding-top: 80px;
+    padding: 80px 0 20px 0;
 }
 
 header .wrapper {
@@ -324,14 +322,12 @@ header .wrapper {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    font-size: 2rem;
-    /* padding: 10px 0; */
-    padding: 0;
+    padding: 10px 0;
     width: 100%;
     top: 0px;
-    background-color: #fefae0;
+    background: rgba(254, 250, 224, 1);
     z-index: 100;
-    transition: border 0.1s ease, top 0.2s linear;
+    transition: top 0.3s ease-in;
 }
 
 .navAndDarkMode .wrapper {
@@ -340,56 +336,57 @@ header .wrapper {
     z-index: 1000;
 }
 
+/* PUT SOLID BACKGROUND TO COVER OVER THE TOP BORDER OF nal ul */
 .navAndDarkMode button {
     border: none;
     background: rgba(254, 250, 224, 1);
-    margin: 0;
     border-radius: 0;
     padding: 10px 0 10px 20px;
 }
 
-.navAndDarkMode i{
+.navAndDarkMode i {
     transition: transform 0.2s ease-out;
     cursor: pointer;
 }
 
+
+/* WORK FIRST TIME, BUT WHEN CLICKED ONCE DOESNT WORK AGAIN */
 /* .navAndDarkMode button:focus,
 .navAndDarkMode button:focus-within, */
-.navAndDarkMode i:hover{
-    /* color: rgba(0,0,0,0.7); */
+.navAndDarkMode i:hover {
     transform: translate(5px, 0);
 }
 
-nav ul{
+nav ul {
     position: fixed;
     padding-top: 30px;
     right: 10%;
     background-color: rgba(254, 250, 224, 0.97);
-    border: 3.5px solid rgba(0,0,0,0.9);
+    border: 3.5px solid rgba(0, 0, 0, 0.9);
     border-top: none;
     border-radius: 25px 0 20px 10px;
-    top: -210px;
-    color: transparent;
-    transition: color 0.05s ease-in, top 0.2s ease-out, border 0.2s ease-out;
+    top: -250px;
+    /* color: transparent; */
+    transition: color 0.02s ease-in, top 0.3s ease-out, border 0.2s ease-out;
     z-index: -100;
     /* border: transparent 0px solid; */
 }
 
 /* so when wrapper reach a max-width of 700px dropdown menu still appears to stay inline with the wrapper*/
-@media(min-width:894px){
-    nav ul{
+@media (min-width: 894px) {
+    nav ul {
         right: calc((100% - 700px) / 2);
     }
 }
 
-nav li{
+nav li {
     padding: 10px 15px;
     width: 100%;
     text-align: right;
 }
 
 nav li:hover,
-nav li:focus{
+nav li:focus {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -401,13 +398,10 @@ nav li:focus{
 
 .nameAndTitle h3 {
     order: 10;
-    font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
 }
 
-header h4 {
-    /* margin-bottom: 30px; */
-    width: 290px;
+.introBlurbAndSocialIcons h4 {
+    width: 280px;
 }
 
 .introBlurbAndSocialIcons {
@@ -434,43 +428,25 @@ header h4 {
     margin: 20px 0 10px 0;
 }
 
-.introBlurbAndSocialIcons img {
+.introBlurbAndSocialIcons img,
+.contact img {
     border: 6px solid #222;
-    border-radius: 7% 10% 15% 25%;;
+    border-radius: 7% 10% 15% 25%;
     max-width: 230px;
     /* margin: 30px 0; */
 }
 
-@media (min-width: 967px) {
+@media (min-width: 880px) {
     .introBlurbAndSocialIcons {
         margin-top: 110px;
     }
 }
 
 
-.skillsGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 10px 0;
-}
-
-.techstack h4 {
-    /* font-size: 1.1rem; */
-    width: 100%;
-    font-weight: 500;
-}
-
-
-.skillsGrid i {
-    font-size: 3rem;
-    padding: 0 10px 15px 0;
-}
-
 
 /* ==============PAGE INDICATOR================ */
 
-aside{
+aside {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -482,14 +458,14 @@ aside{
     border-radius: 8px;
 }
 
-aside i{
+aside i {
     font-size: 0.55rem;
     margin: 10px 0;
     cursor: pointer;
 }
 
-@media(min-width:894px){
-    aside{
+@media (min-width: 894px) {
+    aside {
         /* top: 45%; */
         right: calc((100% - 880px) / 2);
     }
@@ -503,10 +479,63 @@ section {
 /* ================ABOUT======================= */
 .about {
     padding: 0 0 25px 0;
-    /* background-color: #fefae0; */
+}
+
+.toolHeader{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    border: 6px solid #222;
+    border-bottom: none;
+}
+
+.bothstacks {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
+.techstack:first-child {
+    margin: 0 20px 20px 0;
+}
+
+.techstack:last-child {
+    width: 60%;
+}
+
+@media (max-width: 750px) {
+    .techstack:last-child {
+        width: 80%;
+    }
+}
+
+@media (max-width: 534px) {
+    .bothstacks {
+        flex-wrap: wrap;
+    }
+
+    .techstack:first-child {
+        margin-right: 0px;
+    }
+}
+
+.skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.skillsGrid i {
+    font-size: 2.75rem;
+    padding: 0 16px 25px 0;
+}
 
 /* ===============DEMOS========================= */
 .demos {
@@ -514,41 +543,39 @@ section {
 }
 
 .demo {
-    width: 100%;
-    margin-bottom: 40px;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     padding-right: 5px;
     border: 3.5px #222 solid;
     border-left: none;
     border-radius: 0 10px 30px 0;
-    transition: padding-right 0.2s linear;
-    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 3px;
 }
 
 @media (min-width: 600px) {
-    .demo{
+    .demo {
         padding-right: 15px;
     }
 }
 
-.titleAndLinks{
+.titleAndLinks {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
 }
 
-.titleAndLinks h3{
+.titleAndLinks h3 {
     max-width: 65%;
 }
 
-.titleAndLinks a{
+.titleAndLinks a {
     margin-left: 20px;
     font-size: 2rem;
 }
 
-.textAndVisual img{
+.textAndVisual img {
     margin-left: 15px;
     margin-bottom: 15px;
     float: right;
@@ -557,36 +584,58 @@ section {
     border-radius: 12px;
 }
 
-.textAndVisual video{
+.textAndVisual video {
     width: 100%;
     height: auto;
     border-radius: 12px;
     margin-bottom: 15px;
 }
 
-hr{
+hr {
     border: 2.5px solid rgba(34, 34, 34, 0.627);
     border-radius: 3px;
-    width: 85%;
+    width: 50%;
     margin: 2px auto;
 }
 
-.hr1{
-    margin-right: 4%;
-    margin-top: 50px;
+.hr1 {
+    margin-left: 23%;
+    margin-top: 60px;
     border: 2.5px solid rgba(34, 34, 34, 0.9);
-
 }
 
-.hr3{
-    margin-left: 4%;
-    margin-bottom: 50px;
+.hr3 {
+    margin-right: 23%;
+    margin-bottom: 90px;
     border: 2.5px solid rgba(34, 34, 34, 0.327);
 }
 
 /* DEBATABLE */
-.styleHr{
-    transform: rotate(-2deg);
+.styleHr {
+    transform: rotate(-0deg);
+}
+
+.miscDemo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+
+
+.calc img {
+    float: none;
+    width: 100%;
+    max-width: 600px;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.trivia,
+.calc {
+    /* display: none;
+    opacity: 0; */
 }
 
 /* .greyOut {
@@ -605,16 +654,13 @@ hr{
     cursor: default;
 } */
 
-
-
 /* ==================CONTACT=================== */
 .contact {
     padding-bottom: 100px;
-
 }
 .contact .wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .contact h3 {
@@ -622,7 +668,6 @@ hr{
     background-color: #fefae0;
     width: 230px;
     text-align: center;
-    font-size: 1.75rem;
 }
 
 .contact i {
@@ -638,6 +683,7 @@ hr{
     border: 2px solid #222;
     border-radius: 12px;
     box-shadow: 5px 0px #2222229e;
+    height: 150px;
 }
 
 .contact .socialIcons {
@@ -645,7 +691,7 @@ hr{
     margin-bottom: 30px;
 }
 
-.contactInfo button{
+.contactInfo button {
     /* width: 150px; */
     border: none;
     align-self: flex-end;
@@ -659,9 +705,7 @@ hr{
     font-weight: 500;
 }
 
-
-a[href="mailto:longvuong@live.com"]{
-    /* color: red; */
+a[href="mailto:longvuong@live.com"] {
     border: #222 solid 2px;
     padding: 10px 15px;
     border-radius: 8px;
@@ -669,9 +713,8 @@ a[href="mailto:longvuong@live.com"]{
 }
 
 a[href="mailto:longvuong@live.com"]:hover,
-a[href="mailto:longvuong@live.com"]:focus{
+a[href="mailto:longvuong@live.com"]:focus {
     background-color: rgba(0, 0, 0, 0.2);
-    border-color: #222;
 }
 
 /* .contact h4,
@@ -682,8 +725,6 @@ a[href="mailto:longvuong@live.com"]:focus{
     font-weight: bold;
     margin-left: 10px;
 } */
-
-
 
 /* form{
     width: 100%;
@@ -718,18 +759,11 @@ textarea {
 } */
 
 
-@media (min-width: 838px) {
-    .contactInfo {
-        /* margin: 15px 0 0 40px; */
-    }
-}
-
-
 /* ================FOOTER===================== */
 footer {
     padding: 15px 0;
     text-align: center;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 footer h4 {

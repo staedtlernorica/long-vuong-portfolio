@@ -22,7 +22,7 @@ window.onscroll = function () {
 
     // dont dissappear topNav if mobileMenu is opened
   } else if (prevScrollpos < currentScrollPos && !mobileMenuOpened) {
-    document.getElementsByClassName("navAndDarkMode")[0].style.top = "-62px";
+    document.getElementsByClassName("navAndDarkMode")[0].style.top = "-80px";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -90,9 +90,9 @@ function handleNavButton(button) {
       ? (button.target.style.transform = 'rotate(0deg)',
         navUl.style.color = 'transparent',
         navUl.style.border = '3px solid transparent',
-        navUl.style.top = '-210px')
+        navUl.style.top = '-250px')
       : (button.target.style.transform = 'rotate(90deg)',
-        navUl.style.top = '26.8px',
+        navUl.style.top = '30px',
         navUl.style.border = '3px solid rgba(0,0,0,0.75)',
         navUl.style.color = '#222')
   }
