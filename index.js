@@ -20,10 +20,12 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     document.getElementsByClassName("navAndDarkMode")[0].style.top = "0";
+    
 
     // dont dissappear topNav if mobileMenu is opened
   } else if (prevScrollpos < currentScrollPos && !mobileMenuOpened) {
     document.getElementsByClassName("navAndDarkMode")[0].style.top = "-80px";
+    openMenu(false)
   }
   prevScrollpos = currentScrollPos;
 }
@@ -42,9 +44,10 @@ document.querySelectorAll('.pageIndicator i').forEach((button) => {
 
 function scrollToPx(event) {
 
-
   const pxFromTop = document.querySelector('body').getBoundingClientRect().top;
 
+  // No get in touch button
+  // const breakpoints = [0, -760, -1600, -3700, -4707]
   const breakpoints = [0, -680, -1470, -3580, -4707]
 
   let temp = [...breakpoints, pxFromTop].sort(function (a, b) { return a - b; }).reverse();
@@ -52,7 +55,6 @@ function scrollToPx(event) {
   temp = [...new Set(temp)]
 
   const index = temp.indexOf(pxFromTop)
-
 
   event.target.className === 'fas fa-angle-double-up' ?
     window.scrollTo(0, temp[index - 1] * -1) :
@@ -70,26 +72,39 @@ document.querySelectorAll('.navAndDarkMode i').forEach((button) => {
 
 function handleNavButton(button) {
 
-  const navUl = document.querySelector('nav ul')
+
 
   if (button.target.className.includes('moon')) {
 
     button.target.className === 'far fa-moon'
       ? (button.target.className = 'fas fa-moon',
         button.target.style.transform = 'translate(5px, 5px)',
-        alert('put on some sunglasses for now'))
+        alert('Coming soon'))
       : (button.target.className = 'far fa-moon',
         button.target.style.transform = 'translate(0, 0px)')
 
   } else {
     button.target.style.transform === 'rotate(90deg)'
-      ? (button.target.style.transform = 'rotate(0deg)',
-        navUl.style.color = 'transparent',
-        navUl.style.border = '3px solid transparent',
-        navUl.style.top = '-250px')
-      : (button.target.style.transform = 'rotate(90deg)',
-        navUl.style.top = '30px',
-        navUl.style.border = '3px solid rgba(0,0,0,0.75)',
-        navUl.style.color = '#222')
+      ? openMenu(false):
+        openMenu(true)
+  }
+}
+
+function openMenu(open) {
+
+  const btn = document.querySelectorAll('.navAndDarkMode i')[1]
+  const navUl = document.querySelector('nav ul')
+
+  if (open) {
+    (btn.style.transform = 'rotate(90deg)',
+      navUl.style.top = '30px',
+      navUl.style.border = '3px solid rgba(0,0,0,0.75)',
+      navUl.style.color = '#222')
+  }
+  else {
+    (btn.style.transform = 'rotate(0deg)',
+      navUl.style.color = 'transparent',
+      navUl.style.border = '3px solid transparent',
+      navUl.style.top = '-300px')
   }
 }

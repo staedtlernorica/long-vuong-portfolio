@@ -290,7 +290,7 @@ h2 {
 
 h3,
 li {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 h4 {
@@ -369,7 +369,7 @@ nav ul {
     border: 3.5px solid rgba(0, 0, 0, 0.9);
     border-top: none;
     border-radius: 25px 0 20px 10px;
-    top: -250px;
+    top: -300px;
     /* color: transparent; */
     transition: color 0.02s ease-in, top 0.3s ease-out, border 0.2s ease-out;
     z-index: -100;
@@ -409,6 +409,33 @@ nav li:focus {
     width: 280px;
 }
 
+.introBlurbAndSocialIcons button{
+    /* font-weight: bold; */
+    font-style: italic;
+    font-size: 1.1rem;
+    /* padding: 5px 10px 10px 10px;
+    border: solid 5px #222;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer; */
+    /* color: #fefae0; */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    margin: 25px 25px 0 0;
+    border: #222 solid 3px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 150px;
+    transition: all 0.2s linear;
+}
+
+.introBlurbAndSocialIcons button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+}
+
 .introBlurbAndSocialIcons {
     display: flex;
     flex-direction: column;
@@ -436,7 +463,8 @@ nav li:focus {
 .introBlurbAndSocialIcons img,
 .contact img {
     border: 6px solid #222;
-    border-radius: 7% 10% 15% 25%;
+    /* border-radius: 7% 10% 15% 25%; */
+    border-radius: 10% 15% 15% 10%;
     max-width: 230px;
     /* margin: 30px 0; */
 }
@@ -466,12 +494,14 @@ aside {
 aside i {
     font-size: 1.5rem;
     cursor: pointer;
-    margin: 20px 0
+    margin: 20px 0;
+    /* border: 2px solid #222;
+    width: 28px;
+    text-align: center;
+    border-radius: 50%; */
 }
 
-aside a{
-    /* padding: 15px 0; */
-}
+
 
 @media (min-width: 894px) {
     aside {
@@ -627,21 +657,30 @@ hr {
     /* align-items: center; */
 }
 
+.py-yt video{
+    /* transform: scale(1.1); */
+}
 
-
-.calc img {
+.calc img,
+.eh img {
     float: none;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     margin-right: 15px;
     margin-left: 0;
 }
 
-.trivia,
-.calc {
-    /* display: none;
-    opacity: 0; */
+.calc img{
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto;
 }
+
+.portfolio img{
+    max-width: 170px;
+}
+
+
 
 /* .greyOut {
     background-image: linear-gradient(168deg, grey 50%, darkgrey 50%);
@@ -674,6 +713,10 @@ hr {
     text-align: center;
 }
 
+.contact h4{
+    margin-bottom: 50px;
+    max-width: 450px;
+}
 
 /* maybe use for form element when email button is clicked */
 .contactInfo {
