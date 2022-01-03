@@ -714,8 +714,9 @@ hr {
 }
 
 .contact h4{
-    margin-bottom: 50px;
-    max-width: 450px;
+    margin-top: 100px;
+    max-width: 400px;
+    text-align: center;
 }
 
 /* maybe use for form element when email button is clicked */
