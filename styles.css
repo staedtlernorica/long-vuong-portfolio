@@ -277,7 +277,7 @@ button{
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 3.5em;
     text-transform: uppercase;
     line-height: 1;
     order: 100;
@@ -406,7 +406,7 @@ nav li:focus {
 }
 
 .introBlurbAndSocialIcons h4 {
-    width: 280px;
+    width: 315px;
 }
 
 .introBlurbAndSocialIcons button{
@@ -661,7 +661,7 @@ hr {
     /* transform: scale(1.1); */
 }
 
-.calc img,
+/* .calc img, */
 .eh img {
     float: none;
     width: 100%;
@@ -671,9 +671,9 @@ hr {
 }
 
 .calc img{
-    max-width: 450px;
+    /* max-width: 450px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
 .portfolio img{
