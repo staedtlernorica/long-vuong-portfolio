@@ -715,7 +715,7 @@ section {
     margin-left: 0;
 }
 
-.calc img{
+.calc img {
     /* max-width: 450px;
     text-align: center;
     margin: 0 auto; */
@@ -739,7 +739,6 @@ section {
     margin: 0 20px 0 0;
 }
 
-
 label,
 form button {
     font-size: 1.25rem;
@@ -748,7 +747,7 @@ form button {
     display: block;
 }
 
-form button{
+form button {
     color: inherit;
     border: 2px solid #222;
     padding: 15px;
@@ -757,7 +756,7 @@ form button{
     transition: all 0.2s linear;
 }
 
-form button:hover{
+form button:hover {
     transform: translate(5px);
     box-shadow: #222 2px 3px;
 }
@@ -786,22 +785,22 @@ textarea {
     font-weight: 300;
 }
 
-@media(min-width:768px){
-
-    .contact .content{
-        display: flex;    
+@media (min-width: 768px) {
+    .contact .content {
+        display: flex;
         /* flex-direction: column; */
         justify-content: space-between;
-       }
-    
+    }
+
     .socialMediaCard,
-    form{
+    form {
         margin-top: 0;
         width: 50%;
     }
 
-    form{
+    form {
         margin: 10px 0 0 40px;
+    }
 }
 
 /* ================FOOTER===================== */
@@ -839,8 +838,7 @@ footer a {
         flex-wrap: wrap;
     } */
 
-    footer h4 {
+    /* footer h4 {
         margin: 15px 0;
-    }
-}
+    } */
 }
