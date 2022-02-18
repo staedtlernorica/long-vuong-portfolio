@@ -256,7 +256,7 @@ body {
     font-size: 100%;
     color: #222;
     color: #ffa91f;
-    min-width: 400px;
+    min-width: 420px;
     font-family: "Roboto", sans-serif;
     background-color: #f3f3f3;
     background: rgba(19, 84, 122, 0.876);
@@ -485,7 +485,7 @@ header .bounce {
 .bounce {
     position: absolute;
     align-self: center;
-    top: 250px;
+    top: 350px;
     -webkit-animation: bounce 2s infinite;
 
     transition: all 0.2s linear;
