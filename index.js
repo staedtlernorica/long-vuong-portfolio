@@ -10,25 +10,25 @@
 // isElementInViewport();
 
 // ILL GOTTEN GAIN FROM W3SCHOOL EXAMPLE
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
 
-  const mobileMenuOpened = document.querySelector('nav ul').style.top === '26.8px'
+//   const mobileMenuOpened = document.querySelector('nav ul').style.top === '26.8px'
 
 
 
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementsByClassName("navAndDarkMode")[0].style.top = "0";
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementsByClassName("navAndDarkMode")[0].style.top = "0";
     
 
-    // dont dissappear topNav if mobileMenu is opened
-  } else if (prevScrollpos < currentScrollPos && !mobileMenuOpened) {
-    document.getElementsByClassName("navAndDarkMode")[0].style.top = "-80px";
-    openMenu(false)
-  }
-  prevScrollpos = currentScrollPos;
-}
+//     // dont dissappear topNav if mobileMenu is opened
+//   } else if (prevScrollpos < currentScrollPos && !mobileMenuOpened) {
+//     document.getElementsByClassName("navAndDarkMode")[0].style.top = "-80px";
+//     openMenu(false)
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 
 
 
@@ -78,7 +78,6 @@ function handleNavButton(button) {
 
     button.target.className === 'far fa-moon'
       ? (button.target.className = 'fas fa-moon',
-        button.target.style.transform = 'translate(5px, 5px)',
         alert('Coming soon'))
       : (button.target.className = 'far fa-moon',
         button.target.style.transform = 'translate(0, 0px)')
