@@ -302,9 +302,7 @@ section p {
 }
 
 h1 {
-    font-family: "Lora", serif;
-    font-weight: 300;
-    font-size: 3.25rem;
+    font-size: 3.5em;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
@@ -708,7 +706,7 @@ section {
     /* transform: scale(1.1); */
 }
 
-.calc img,
+/* .calc img, */
 .eh img {
     float: none;
     width: 100%;
@@ -717,10 +715,10 @@ section {
     margin-left: 0;
 }
 
-.calc img {
-    max-width: 450px;
+.calc img{
+    /* max-width: 450px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
 .portfolio img {
@@ -844,4 +842,5 @@ footer a {
     footer h4 {
         margin: 15px 0;
     }
+}
 }
