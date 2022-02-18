@@ -220,7 +220,7 @@ template {
 
 /* MOBILE ORIENTED WRAPPER */
 .wrapper {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     max-width: 1100px;
 }
@@ -256,7 +256,7 @@ body {
     font-size: 100%;
     color: #222;
     color: #ffa91f;
-    min-width: 420px;
+    /* min-width: 420px; */
     font-family: "Roboto", sans-serif;
     background-color: #f3f3f3;
     background: rgba(19, 84, 122, 0.876);
@@ -387,7 +387,7 @@ nav i {
 nav ul {
     position: fixed;
     padding-top: 50px;
-    right: 5%;
+    right: 2.5%;
     background-color: rgb(30, 80, 104);
     border: 3.5px solid rgba(0, 0, 0, 0.9);
     /* border-radius: 25px 0 20px 10px; */
