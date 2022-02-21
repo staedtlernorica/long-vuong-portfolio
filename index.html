@@ -38,6 +38,10 @@
 
 <body>
 
+    <div class="blurryBackground">
+
+    </div>
+
     <div class="navAndDarkMode">
         <div class="wrapper">
 
@@ -63,29 +67,29 @@
     </div>
 
 
-    <header id="banner">
+    <header id="header">
 
-        <div class="overlay">
+        <!-- <div class="overlay"> -->
 
-            <div class="wrapper">
-                <div class="nameAndTitleButton">
-                    <h1>Long Vuong</h1>
-                    <h3>- modern, elegant front end designs</h3>
+        <div class="wrapper">
+            <div class="nameAndTitleButton">
+                <h1>Long Vuong</h1>
+                <h3>- modern, elegant front end designs</h3>
 
-                    <div class="socialLinks">
-                        <a href="https://ca.linkedin.com/in/vuonglong">LinkedIn</a>
-                        <a href="https://github.com/staedtlernorica">GitHub</a>
-                        <a href="https://twitter.com/llllooonng">Twitter</a>
-                    </div>
-
-                    <a href="#about" class="bounce">
-                        <i class="fas fa-angle-double-down"></i>
-                    </a>
+                <div class="socialLinks">
+                    <a href="https://ca.linkedin.com/in/vuonglong">LinkedIn</a>
+                    <a href="https://github.com/staedtlernorica">GitHub</a>
+                    <a href="https://twitter.com/llllooonng">Twitter</a>
                 </div>
+
 
             </div>
 
         </div>
+        <a href="#about" class="bounce">
+            <i class="fas fa-angle-double-down"></i>
+        </a>
+        <!-- </div> -->
     </header>
 
 
@@ -172,35 +176,6 @@
                         </ul>
                     </div>
 
-                    <!-- <div class="bothstacks">
-                        <div class="techstack">
-                            <h4>I'm learning:</h4>
-                            <div class="skillsGrid">
-                                <i class="devicon-vuejs-plain colored" title="Vue.js"></i>
-                                <i class="devicon-materialui-plain colored" title="Material UI"></i>
-                               
-                                <i class="devicon-nodejs-plain colored" title="Node.js"></i>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>SASS</li>
-                        <li>jQuery</li>
-                        <li>Python</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Firebase</li>
-                        <li>R</li>
-                        <li>Flask</li>
-                        <li>Vue.js</li>
-
-                    </ul> -->
-
                 </div>
             </div>
         </section>
@@ -210,163 +185,98 @@
             <div class="wrapper">
                 <h2>Web Dev Projects</h2>
                 <div class="content">
-                    <h4>Will be back in a jiffy!</h4>
+                
+                    <section class="todo demo clearfix">
+                        <img src="./assets/todo thumbnail.png" alt="">
+                        <div class="titleAndLinks">
+                            <h3>To Do List</h3>
+                            <div class="links">
+                                <a href="https://github.com/staedtlernorica/long-vuong-project-three">GitHub</a>
+                                <a href="https://junotodoapp.netlify.app/">Live Site</a>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                A React to-do list, users can add or remove as many tasks as needed, then save their list to
+                                Firebase. The saved list will then be display in the below section.
+                                Users can also interact with the saved list. They can edit task(s), cross out ones they've
+                                finished, and delete the list if they've finished all tasks (or like to pretend they have)
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="calc demo clearfix">
+                        <img src="./assets/runner-calculator.png" alt="">
+                        <div class="titleAndLinks">
+                            <h3>Runner Pace Calculator</h3>
+                            <div class="links">
+                                <a href="https://github.com/staedtlernorica/runner-calculator">GitHub</a>
+                                <a href="https://staedtlernorica.github.io/runner-calculator/">Live Site</a>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Given two of time/distance/pace, will calculate the remaining quantity. Seamlessly switch
+                                between
+                                metric and imperial units at the click of a button, rather than having to reset the
+                                calculator
+                                after every new input.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="trivia demo clearfix">
+                        <img src="assets/quiz game.png" alt="">                        <div class="titleAndLinks">
+                            <h3>Trivia Quiz</h3>
+                            <div class="links">
+                                <a href="https://github.com/staedtlernorica/JS-quiz">GitHub</a>
+                                <a href="https://staedtlernorica.github.io/JS-quiz/">Live Site</a>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Retrieve trivia questions from a trivia database API that matches user's input settings, and
+                                run the questions through a trivia quiz UI (think "Who Wants to be a Millionaire").
+                            </p>
+                        </div>
+                    </section>
+
+
+
+
+
+    
+                    <!--     
+                  
+    
+                    <section class="meme demo">
+                        <div class="titleAndLinks">
+                            <h3>Meme in a Giffy</h3>
+                            <div class="links">
+                                <a href="https://github.com/worst-group-ever/MemesInAGiffy"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://hardcore-banach-c7c40d.netlify.app/"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="textAndVisual">
+                            <video width="380" height="240" autoplay muted loop>
+                                <source src="./assets/react memes.mp4" type="video/mp4" />
+                            </video>
+                            <p>A React app created with Danielle Alamilla, Camila Aparicio, and Dre Nnamdi.
+                                Using the GIPHY API, users can search for gifs, add their own text caption,
+                                tag(s),
+                                and save it all together as a meme to Firebase. Users can then go to the Browse section and
+                                look at saved memes, search for ones with specific
+                                caption/tags, and vote on them.
+                            </p>
+                        </div>
+                    </section> -->
+
                 </div>
             </div>
         </section>
 
-
-        <!-- <section class="demos" id="demos">
-            <div class="wrapper">
-
-                <h2>Web Dev Projects</h2>
-                <section class="todo demo">
-                    <div class="titleAndLinks">
-                        <h3>To Do List</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/long-vuong-project-three"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://junotodoapp.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="./assets/todo thumbnail.png" alt="">
-                        <p>
-                            A React to-do list, users can add or remove as many tasks as needed, then save their list to
-                            Firebase. The saved list will then be display in the below section.
-                        </p>
-                        <p>
-                            Users can also interact with the saved list. They can edit task(s), cross out ones they've
-                            finished, and delete the list if they've finished all tasks (or like to pretend they have)
-                        </p>
-                    </div>
-                </section>
-
-                <section class="calc demo">
-                    <div class="titleAndLinks">
-                        <h3>Running Calculator</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/runner-calculator"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://staedtlernorica.github.io/runner-calculator/"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="./assets/calc thumbnail.png" alt="">
-                        <p>Given two of time/distance/pace, will calculate the remaining quantity. Seamlessly switch
-                            between
-                            metric and imperial units at the click of a button, rather than having to reset the
-                            calculator
-                            after every new input.</p>
-                    </div>
-                </section>
-
-                <section class="trivia demo">
-                    <div class="titleAndLinks">
-                        <h3>Trivia Quiz</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/JS-quiz"><i class="fab fa-github"></i></a>
-                            <a href="https://staedtlernorica.github.io/JS-quiz/"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="assets/steve-johnson-QFqpeY0r-IU-unsplash.jpg" alt="">
-                        <p>Retrieve trivia questions from a trivia database API that matches user's input settings, and
-                            run the questions through a trivia quiz UI (think "Who Wants to be a Millionaire").</p>
-                    </div>
-                </section>
-
-                <section class="todo demo">
-                    <div class="titleAndLinks">
-                        <h3>To Do List</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/long-vuong-project-three"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://junotodoapp.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="./assets/todo thumbnail.png" alt="">
-                        <p>
-                            A React to-do list, users can add or remove as many tasks as needed, then save their list to
-                            Firebase. The saved list will then be display in the below section.
-                        </p>
-                        <p>
-                            Users can also interact with the saved list. They can edit task(s), cross out ones they've
-                            finished, and delete the list if they've finished all tasks (or like to pretend they have)
-                        </p>
-                    </div>
-                </section>
-
-                
-
-                <section class="trivia demo">
-                    <div class="titleAndLinks">
-                        <h3>Trivia Quiz</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/JS-quiz"><i class="fab fa-github"></i></a>
-                            <a href="https://staedtlernorica.github.io/JS-quiz/"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="assets/quiz game.png" alt="">
-                        <p>Retrieve trivia questions from a trivia database API that matches user's input settings, and
-                            run the questions through a trivia quiz UI (think "Who Wants to be a Millionaire").</p>
-                    </div>
-                </section>
-
-
-                <section class="calc demo">
-                    <div class="titleAndLinks">
-                        <h3>Running Calculator</h3>
-                        <div class="links">
-                            <a href="https://github.com/staedtlernorica/runner-calculator"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://staedtlernorica.github.io/runner-calculator/"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <img src="./assets/runner-calculator.png" alt="">
-                        <p>Given two of time/distance/pace, will calculate the remaining quantity. Seamlessly switch
-                            between
-                            metric and imperial units at the click of a button, rather than having to reset the
-                            calculator
-                            after every new input.</p>
-                    </div>
-                </section>
-
-
-
-                <section class="meme demo">
-                    <div class="titleAndLinks">
-                        <h3>Meme in a Giffy</h3>
-                        <div class="links">
-                            <a href="https://github.com/worst-group-ever/MemesInAGiffy"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://hardcore-banach-c7c40d.netlify.app/"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="textAndVisual">
-                        <video width="380" height="240" autoplay muted loop>
-                            <source src="./assets/react memes.mp4" type="video/mp4" />
-                        </video>
-                        <p>A React app created with Danielle Alamilla, Camila Aparicio, and Dre Nnamdi.
-                            Using the GIPHY API, users can search for gifs, add their own text caption,
-                            tag(s),
-                            and save it all together as a meme to Firebase. Users can then go to the Browse section and
-                            look at saved memes, search for ones with specific
-                            caption/tags, and vote on them.
-                        </p>
-                    </div>
-                </section>
-
-            </div>
-        </section> -->
 
         <!-- <section class="otherDemos" id="otherDemos">
             <div class="wrapper">
