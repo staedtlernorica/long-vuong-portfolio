@@ -242,11 +242,10 @@ li {
 a,
 a:link,
 a:visited {
-    color: #00f7ff;
+    color: #0dc6cc;
     text-decoration: none;
     /* transition: opacity 0.1s linear; */
 }
-
 
 body {
     font-size: 100%;
@@ -378,7 +377,7 @@ nav ul {
     right: 2.5%;
     background-color: rgb(30, 80, 104);
     border: 3.5px solid rgba(0, 0, 0, 0.9);
-    top: -300px;
+    top: -400px;
     width: 260px;
     box-shadow: #222 4px 8px;
     transition: color 0.02s ease-in, top 0.3s ease-out, border 0.2s ease-out;
@@ -579,13 +578,33 @@ section {
     }
 }
 
-/* ================ABOUT======================= */
+/* ================SKILLS======================= */
+.skills h2{
+    position: relative;
+    z-index: 100;
+}
+
+.skills .content{
+    position: relative;
+}
 
 .skillsGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 5rem;
+}
+
+@media(min-width: 540px){
+    .skillsGrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(min-width: 700px){
+    .skillsGrid{
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 .skillsGrid i {
@@ -593,10 +612,19 @@ section {
 }
 
 .skillsGrid li {
+    margin: 0 auto;
     text-align: center;
     width: 100px;
-    margin: 10px 0px;
-    /* flex-basis: 12%; */
+    margin: 10px auto;
+}
+
+i.fas.fa-tools{
+    position: absolute;
+    font-size: 7rem;
+    color: rgb(155, 155, 155);
+    bottom: -5px;
+    right: 5px;
+    transform: rotate(15deg);
 }
 
 /* ===============DEMOS========================= */
@@ -608,7 +636,7 @@ section {
     padding: 0;
     border: none;
     background-color: transparent;
-    margin-top: 100px;
+    margin-top: 70px;
 
     display: flex;
     flex-wrap: wrap;
@@ -618,7 +646,7 @@ section {
 .demo {
     margin-bottom: 80px;
     padding: 10px;
-    border: 3px #222 solid;
+    border: #222 4px solid;
     background-color: rgb(30, 80, 104);
 }
 
@@ -631,10 +659,11 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    clear: both;
     /* max-width: 300px; */
 }
 
-@media(min-width: 700px){
+@media (min-width: 700px) {
     .titleAndLinks {
         max-width: none;
     }
@@ -647,10 +676,9 @@ section {
     box-shadow: #222 6px 5px;
 }
 
-@media(min-width: 800px){
-    .demo img{
+@media (min-width: 800px) {
+    .demo img {
         width: 30%;
-
     }
 }
 
@@ -667,10 +695,16 @@ section {
 
 .links {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 @media (min-width: 520px) {
+    .titleAndLinks{
+        clear: none;
+    }
+    .links{
+        flex-direction: column;
+    }
 }
 
 .links a {
@@ -681,10 +715,10 @@ section {
 }
 
 .links a:first-child {
-    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
-@media (min-width: 525px) {
+@media (min-width: 550px) {
     .links {
         flex-direction: row;
     }
@@ -720,8 +754,8 @@ section {
     margin: 5px 0;
 }
 
-@media(min-width:600px){
-    .description{
+@media (min-width: 600px) {
+    .description {
         clear: none;
         display: flex;
     }
@@ -739,7 +773,62 @@ section {
 
 .content .socialLinks a {
     margin: 0 20px 0 0;
+}
+
+.socialMedia{
+    position: relative;
+}
+
+i.fas.fa-pencil-alt{
+    position: absolute;
+    font-size: 4rem;
+    top: 250px;
+    right: -50px;
+    transform: scaleX(-1) rotate(15deg);
+}
+
+
+.socialMedia i {
+    display: none;
+    font-size: 12rem;
+    position: absolute;
+    bottom: 120px;
+    left: 15px;
+    transform: rotate(25deg);
+
+}
+
+i.fas.fa-envelope{
+    position: absolute;
+    bottom: 20px;
+    color: rgb(241, 241, 241);
+
+}
+
+hr{
+    border: solid 3px #ffa91f;;
+    border-radius: 35px;
+    width: 160px;
+    display: none;
+    position: absolute;
+    bottom: 145px;
+    left: 200px;
+    transform: rotate(-1deg);
+}
+
+.two{
+    bottom: 125px;
+    left: 200px;
+    width: 140px;
+    border: solid 4px #ffa91f;;
     
+}
+
+.three{
+    bottom: 105px;
+    left: 220px;
+    width: 110px;
+    transform: rotate(2deg);
 }
 
 label,
@@ -795,7 +884,12 @@ textarea {
         justify-content: space-between;
     }
 
-    .socialMediaCard,
+    .socialMedia i,
+    hr{
+        display: block;
+    }
+
+    .socialMedia,
     form {
         margin-top: 0;
         width: 50%;

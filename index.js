@@ -104,6 +104,6 @@ function openMenu(open) {
     (btn.style.transform = 'rotate(0deg)',
       navUl.style.color = 'transparent',
       navUl.style.border = '3px solid transparent',
-      navUl.style.top = '-300px')
+      navUl.style.top = '-400px')
   }
 }
