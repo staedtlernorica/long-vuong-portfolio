@@ -325,6 +325,7 @@ a {
 }
 
 h4 {
+    font-weight: 300;
     font-size: 1.25rem;
 }
 
@@ -472,7 +473,7 @@ header .bounce {
 .bounce {
     align-self: center;
     margin: 0 auto;
-    bottom: 60px;
+    bottom: 5%;
     left: 50%;
     position: absolute;
     transition: all 0.2s linear;
@@ -565,6 +566,15 @@ header .bounce {
 }
 
 /* ==================MAIN====================== */
+.about img{
+    max-width: 200px;
+    border: 4px #222 solid;
+    box-shadow: rgb(53, 52, 52) 3px 5px;
+    float: left;
+    margin: 10px 15px 0 0;
+}
+
+
 
 section {
     padding: 20px 0 40px 0;
@@ -700,6 +710,20 @@ i.fas.fa-tools{
     margin: 0 0 20px 0;
 }
 
+.demo h3{
+    color: rgb(10, 53, 80);
+    background-color: #ff8635;
+}
+
+.description a{
+    font-size: 1.15rem;
+    border-bottom: #ff6600 solid 2px;
+}
+
+.description h4{
+    color: #ff8635;
+}
+
 .links {
     display: flex;
     /* flex-direction: column; */
@@ -755,6 +779,7 @@ i.fas.fa-tools{
 
 .description {
     clear: both;
+    flex-direction: column;
 }
 
 .description p {
@@ -767,6 +792,51 @@ i.fas.fa-tools{
         display: flex;
     }
 }
+
+.psd-containers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.psd-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.psd-container .links{
+    margin-top: -20px;
+    align-self: center;
+    flex-direction: row;
+}
+
+.psd-container img{
+    margin: 0 auto;
+    float: none;
+    width: 70%;
+}
+
+@media(min-width:870px){
+
+    .psd-containers{
+        flex-direction: row;
+    }
+
+    .psd-container{
+        padding-bottom: 30px;
+        max-width: calc(100%/3);
+    }
+
+    .psd-container img{
+        width: 90%;
+    }
+
+    .psd-container .links{
+        margin-top: 20px;
+    }
+}
+
 
 /* ==================CONTACT=================== */
 .contact {
