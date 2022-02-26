@@ -241,7 +241,7 @@ li {
 
 li a,
 li a:link,
-li a:visited{
+li a:visited {
     color: rgb(19, 84, 122);
 }
 
@@ -266,7 +266,16 @@ body {
     background-size: cover;
 }
 
+
+/* dark overlay underneath */
 .blurryBackground {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1000;
+    height: 100vh;
+    width:100%; 
+    clear:both;
 }
 
 section {
@@ -363,7 +372,6 @@ i {
 .navAndDarkMode button {
     padding: 5px 10px;
     color: rgb(19, 84, 122);
-    
 }
 
 .buttons {
@@ -403,7 +411,6 @@ nav li {
     text-align: right;
 }
 
-
 nav li:hover,
 nav li:focus {
     background-color: rgba(0, 0, 0, 0.2);
@@ -411,7 +418,7 @@ nav li:focus {
 
 header,
 section {
-    background-color: rgba(0, 0, 0, 0.35);
+    /* background-color: rgba(0, 0, 0, 0.35); */
 }
 
 .socialLinks {
@@ -566,15 +573,13 @@ header .bounce {
 }
 
 /* ==================MAIN====================== */
-.about img{
+.about img {
     max-width: 200px;
     border: 4px #222 solid;
     box-shadow: rgb(53, 52, 52) 3px 5px;
     float: left;
     margin: 10px 15px 0 0;
 }
-
-
 
 section {
     padding: 20px 0 40px 0;
@@ -596,12 +601,12 @@ section {
 }
 
 /* ================SKILLS======================= */
-.skills h2{
+.skills h2 {
     position: relative;
     z-index: 100;
 }
 
-.skills .content{
+.skills .content {
     position: relative;
 }
 
@@ -612,14 +617,14 @@ section {
     font-size: 5rem;
 }
 
-@media(min-width: 540px){
-    .skillsGrid{
+@media (min-width: 540px) {
+    .skillsGrid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media(min-width: 700px){
-    .skillsGrid{
+@media (min-width: 700px) {
+    .skillsGrid {
         grid-template-columns: repeat(5, 1fr);
     }
 }
@@ -635,7 +640,7 @@ section {
     margin: 10px auto;
 }
 
-i.fas.fa-tools{
+i.fas.fa-tools {
     position: absolute;
     font-size: 7rem;
     color: rgb(155, 155, 155);
@@ -710,17 +715,17 @@ i.fas.fa-tools{
     margin: 0 0 20px 0;
 }
 
-.demo h3{
+.demo h3 {
     color: rgb(10, 53, 80);
     background-color: #ff8635;
 }
 
-.description a{
+.description a {
     font-size: 1.15rem;
     border-bottom: #ff6600 solid 2px;
 }
 
-.description h4{
+.description h4 {
     color: #ff8635;
 }
 
@@ -730,10 +735,10 @@ i.fas.fa-tools{
 }
 
 @media (min-width: 520px) {
-    .titleAndLinks{
+    .titleAndLinks {
         clear: none;
     }
-    .links{
+    .links {
         flex-direction: column;
     }
 }
@@ -793,50 +798,48 @@ i.fas.fa-tools{
     }
 }
 
-.psd-containers{
+.psd-containers {
     display: flex;
     flex-wrap: wrap;
 }
 
-.psd-container{
+.psd-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.psd-container .links{
+.psd-container .links {
     margin-top: -20px;
     align-self: center;
     flex-direction: row;
 }
 
-.psd-container img{
+.psd-container img {
     margin: 0 auto;
     float: none;
     width: 70%;
 }
 
-@media(min-width:870px){
-
-    .psd-containers{
+@media (min-width: 870px) {
+    .psd-containers {
         flex-direction: row;
     }
 
-    .psd-container{
+    .psd-container {
         padding-bottom: 30px;
-        max-width: calc(100%/3);
+        max-width: calc(100% / 3);
     }
 
-    .psd-container img{
+    .psd-container img {
         width: 90%;
     }
 
-    .psd-container .links{
+    .psd-container .links {
         margin-top: 20px;
     }
 }
-
 
 /* ==================CONTACT=================== */
 .contact {
@@ -852,18 +855,17 @@ i.fas.fa-tools{
     margin: 0 20px 0 0;
 }
 
-.socialMedia{
+.socialMedia {
     position: relative;
 }
 
-i.fas.fa-pencil-alt{
+i.fas.fa-pencil-alt {
     position: absolute;
     font-size: 4rem;
     top: 250px;
     right: -50px;
     transform: scaleX(-1) rotate(15deg);
 }
-
 
 .socialMedia i {
     display: none;
@@ -872,10 +874,9 @@ i.fas.fa-pencil-alt{
     bottom: 120px;
     left: 25px;
     transform: rotate(15deg);
-
 }
 
-i.fas.fa-envelope{
+i.fas.fa-envelope {
     position: absolute;
     left: 10px;
     bottom: 10px;
@@ -884,8 +885,8 @@ i.fas.fa-envelope{
     font-size: 12rem;
 }
 
-hr{
-    border: solid 3px #ffa91f;;
+hr {
+    border: solid 3px #ffa91f;
     border-radius: 35px;
     width: 160px;
     display: none;
@@ -895,15 +896,14 @@ hr{
     transform: rotate(-1deg);
 }
 
-.two{
+.two {
     bottom: 125px;
     left: 200px;
     width: 140px;
-    border: solid 4px #ffa91f;;
-    
+    border: solid 4px #ffa91f;
 }
 
-.three{
+.three {
     bottom: 105px;
     left: 220px;
     width: 110px;
@@ -964,7 +964,7 @@ textarea {
     }
 
     .socialMedia i,
-    hr{
+    hr {
         display: block;
     }
 
@@ -1017,4 +1017,16 @@ footer a {
     /* footer h4 {
         margin: 15px 0;
     } */
+}
+
+/* ANIMATION */
+.demo{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.demo.active {
+    transform: translateY(0);
+    opacity: 1;
 }
