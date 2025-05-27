@@ -1,6 +1,6 @@
 body {
     background-color: beige !important;
-}
+}   
 
 a {
     text-decoration: none !important;
@@ -8,10 +8,6 @@ a {
 
 .wrapper {
     padding: 0 10%;
-    /* margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column; */
 }
 
 
@@ -23,8 +19,7 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    /* max-width: 800px; */
-    margin: 15vh auto 50px;
+    margin: 15vh auto 0;
 }
 
 .intro img {
@@ -45,7 +40,7 @@ section {
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .socials {
@@ -56,11 +51,11 @@ section {
 }
 
 .projects {
-    margin: 75px auto 50px;
+    margin: 50px auto 50px;
 
-    /* margin-left: 15px; */
-    /* margin-bottom: 20px; */
-
+    h3{
+        text-align: center;
+    }
 }
 
 .project img {
@@ -75,7 +70,6 @@ section {
 
 
 .project {
-    /* display: flex; */
     gap: 30px;
     padding: 15px;
     margin-bottom: 30px;
@@ -100,12 +94,15 @@ section {
     }
 
     .intro {
-        /* padding: 0 10%; */
         flex-wrap: wrap;
     }
 
     .about {
         max-width: none;
+    }
+
+    .projects{
+        margin: 25px auto 50px;
     }
 
     .wrapper {
@@ -124,6 +121,18 @@ section {
     }
 
     section{
+        margin: 0;
+    }
+}
+
+
+footer{
+    text-align: center;
+    background-color: rgb(204, 204, 176);
+    padding: 15px 0 10px;
+    margin: 70px 0 0;
+
+    h6{
         margin: 0;
     }
 }
