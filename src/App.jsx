@@ -3,10 +3,8 @@ import NavBar from "./components/NavBar";
 import ProjectsContainer from "./components/ProjectsContainer";
 import Footer from "./components/Footer";
 
-
 function App() {
   return (
-
     <>
       <div className="wrapper">
         <NavBar></NavBar>
@@ -15,8 +13,7 @@ function App() {
       </div>
       <Footer></Footer>
     </>
-  )
-
+  );
 }
 
 export default App;
