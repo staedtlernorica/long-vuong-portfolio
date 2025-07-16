@@ -1,5 +1,6 @@
 import hydroImg from "../assets/hydro 2.png";
 import ytImg from "../assets/ytstats.png";
+import kandobanImg from "../assets/kandoban.png";
 import sophieGif from "../assets/ssophie.gif";
 import pandaGif from "../assets/panda sanctuary.gif";
 import journalGif from "../assets/the journal.gif";
@@ -9,6 +10,42 @@ export default function ProjectsContainer() {
     <section className="projects">
       <h3>Projects</h3>
       <br />
+
+      <div className="project">
+        <section className="img-title">
+          <div className="title">
+            <h4>Kandoban</h4>
+            <h6>
+              React, Material UI, Tailwind CSS, Firebase, OAuth 2.0, Netlify{" "}
+            </h6>
+            <div className="links">
+              <a href="https://kandoban.netlify.app/">Live Site</a>
+            </div>
+          </div>
+          <div className="img-container">
+            <img src={kandobanImg} alt="" style={{ maxHeight: "250px" }} />
+          </div>
+        </section>
+
+        <div className="description">
+          <h6>Overview</h6>
+          <p>
+            A responsive, full-stack Kanban-style todo app that allow users to
+            track recurring todos by changing a task’s completion status.
+            Firebase handles both data storage and OAuth 2.0 authentication with
+            Google accounts, allowing seamless data syncing between a user’s
+            mobile and desktop devices.
+          </p>
+          <br />
+          <h6>Project motivation</h6>
+          <p>
+            I was inspired to create this Kanban-style to-do tracker after
+            feeling limited by the built-in reminder app on the iPhone, which
+            often fall short when it comes to managing recurring tasks and
+            staying truly organized across non-Apple devices.
+          </p>
+        </div>
+      </div>
 
       <div className="project">
         <section className="img-title">
