@@ -1,3 +1,10 @@
+import hydroImg from '../assets/hydro 2.png'
+import ytImg from '../assets/ytstats.png'
+import sophieGif from '../assets/ssophie.gif'
+import pandaGif from '../assets/panda sanctuary.gif'
+import journalGif from '../assets/the journal.gif'
+
+
 export default function ProjectsContainer() {
 
     return (<section className="projects">
@@ -15,7 +22,7 @@ export default function ProjectsContainer() {
                     </div>
                 </div>
                 <div className="img-container">
-                    <img src="./assets/hydro 2.png" alt="" />
+                    <img src={hydroImg} alt="" />
                 </div>
             </section>
 
@@ -54,7 +61,7 @@ export default function ProjectsContainer() {
                     </div>
                 </div>
                 <div className="img-container">
-                    <img src="./assets/ytstats.png" alt="" />
+                    <img src={ytImg} alt="" />
                 </div>
             </section>
 
@@ -118,21 +125,21 @@ export default function ProjectsContainer() {
                         </div>
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="13000">
-                                <img src="assets/ssophie.gif" className="d-block w-100" alt="..." />
+                                <img src={sophieGif} className="d-block w-100" alt="..." />
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>Sophie</h5>
                                     {/* <!-- <p>Some representative placeholder content for the second slide.</p> --> */}
                                 </div>
                             </div>
                             <div className="carousel-item" data-bs-interval="8000">
-                                <img src="assets/panda sanctuary.gif" className="d-block w-100" alt="..." />
+                                <img src={pandaGif} className="d-block w-100" alt="..." />
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>Panda Sanctuary</h5>
                                     {/* <!-- <p>Some representative placeholder content for the first slide.</p> --> */}
                                 </div>
                             </div>
                             <div className="carousel-item" data-bs-interval="8000">
-                                <img src="assets/the journal.gif" className="d-block w-100" alt="..." />
+                                <img src={journalGif} className="d-block w-100" alt="..." />
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>The Journal</h5>
                                     {/* <!-- <p>Some representative placeholder content for the third slide.</p> --> */}

@@ -1,10 +1,13 @@
+import headshot from '../assets/headshot.png'
+import resume from '../assets/resume.pdf'
+
 export default function IntroHeader() {
 
     return (
         <>
             <section className="intro">
                 <div className="blurb">
-                    <img src="assets/headshot.png" alt="Picture of me"/>
+                    <img src={headshot} alt="Picture of me"/>
 
                         <div className="greetings-socials">
 
@@ -12,7 +15,7 @@ export default function IntroHeader() {
                             <div className="socials">
                                 <a href="https://github.com/staedtlernorica">GitHub</a>
                                 <a href="https://www.linkedin.com/in/vuonglong/">LinkedIn</a>
-                                <a href="assets/Resume V4.pdf" target="_blank" rel="noopener noreferrer">
+                                <a href={resume} target="_blank" rel="noopener noreferrer">
                                     Resume
                                 </a>
 
