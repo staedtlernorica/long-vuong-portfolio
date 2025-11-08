@@ -14,11 +14,16 @@ export default function Portfolio() {
       <Box className="mt-5 w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         <ProjectCard
           name="Automated Meetup Archiver"
-          description="
-          Automated data harvester that archive past events and analyze group trends. 
-          This tool indexes all events from a Meetup group, then extracts structured details (e.g. date, attendees, location) and stores these in SQL tables."
+          description="Automated data harvester built with Selenium and BS4 that archive all past events from a Meetup group, and extracts structured details (e.g. date, attendees, location) into SQL tables."
           icon={<ArchiveIcon />}
-          tags={["Python", "Selenium", "Web Scraping", "PostgreSQL", "ETL"]}
+          tags={[
+            "ETL",
+            "Python",
+            "Selenium",
+            "Web Scraping",
+            "PostgreSQL",
+            "BeautifulSoup4 (BS4)",
+          ]}
           link="/projects/meetup-archival"
           linkText="View Project"
         />
