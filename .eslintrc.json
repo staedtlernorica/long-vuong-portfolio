@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "unused-imports"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // If you're using React 17 JSX Transform
+    "unused-imports/no-unused-imports": "error", // Automatically removes unused imports
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "prettier/prettier": ["error", { "singleQuote": true }]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

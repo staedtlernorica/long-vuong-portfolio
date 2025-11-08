@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import SystemUpdateAltRoundedIcon from "@mui/icons-material/SystemUpdateAltRounded";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCard from "../../components/projects/ProjectCard";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import { Typography } from "@mui/material";
 
