@@ -35,7 +35,7 @@ const MainSection1 = ({ header, description, imageUrl }: MainSection1Props) => {
 
       <Typography
         variant="body1"
-        className="text-lg text-gray-700 max-w-fit leading-relaxed my-8!"
+        className="text-lg text-gray-700 max-w-fit leading-relaxed my-8! whitespace-pre-wrap!"
       >
         {description}
       </Typography>

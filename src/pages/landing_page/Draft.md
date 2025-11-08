@@ -2,7 +2,7 @@ Automated Meetup Archiver
 
 Python Selenium PostgreSQL Web Scraping ETL
 
-An automated data ingestion pipeline that indexes all events from a Meetup group, then extracts structured details (e.g. date, attendees, location) and stores these in SQL tables. Information can be used for analysis of attendance trends and further understand user engagement.
+An automated data ingestion pipeline that indexes all past Meetup events and extracts structured metadata into SQL tables. Tables can serve as archive or used for analysis of attendance trends and user engagement.
 
 DISCLAIMER
 Not working as well as when this project started because of Meetup further locking down features/changing UI

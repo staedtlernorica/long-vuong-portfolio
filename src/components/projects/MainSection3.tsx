@@ -61,7 +61,7 @@ const MainSection3 = ({ sectionProps }: MainSection3Props) => {
 
                   <Typography
                     variant="body1"
-                    className="text-gray-700 leading-relaxed mt-4 max-w-2xl"
+                    className="text-gray-700 leading-relaxed mt-4"
                     sx={{
                       fontSize: { xs: "0.95rem", sm: "1rem" },
                       whiteSpace: "pre-line",
