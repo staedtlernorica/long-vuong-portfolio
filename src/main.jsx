@@ -1,49 +1,52 @@
-import ReactDOM from "react-dom/client";
-import "./styles/styles.css";
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
-import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import ReactDOM from 'react-dom/client';
+import './styles/styles.css';
+import { createBrowserRouter } from 'react-router';
+import { RouterProvider } from 'react-router/dom';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 
-import Portfolio from "./pages/landing_page/LandingPage";
-import EnergyAnalysis from "./pages/projects/energy_analysis/EnergyAnalysis";
-import GA4Migration from "./pages/projects/ga4_migration/GA4Migration";
-import MeetupArchival from "./pages/projects/meetup_archival/MeetupArchival";
+import Portfolio from './pages/landing_page/LandingPage';
+import EnergyAnalysis from './pages/projects/energy_analysis/EnergyAnalysis';
+import GA4Migration from './pages/projects/ga4_migration/GA4Migration';
+import MeetupArchival from './pages/projects/meetup_archival/MeetupArchival';
 // Supports weights 200-900
-import "@fontsource-variable/nunito";
+import '@fontsource-variable/nunito';
 
 const theme = createTheme({
   typography: {
-    fontFamily: ['"Nunito"', "ui-sans-serif", "system-ui", "sans-serif"].join(
-      ","
-    ),
+    fontFamily: ['"Nunito"', 'ui-sans-serif', 'system-ui', 'sans-serif'].join(','),
   },
 });
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      Component: Portfolio,
+    },
+    {
+      path: '/projects',
+      children: [
+        {
+          path: 'energy-analysis',
+          Component: EnergyAnalysis,
+        },
+        {
+          path: 'ga4-migration',
+          Component: GA4Migration,
+        },
+        {
+          path: 'meetup-archival',
+          Component: MeetupArchival,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    Component: Portfolio,
-  },
-  {
-    path: "/projects",
-    children: [
-      {
-        path: "energy-analysis",
-        Component: EnergyAnalysis,
-      },
-      {
-        path: "ga4-migration",
-        Component: GA4Migration,
-      },
-      {
-        path: "meetup-archival",
-        Component: MeetupArchival,
-      },
-    ],
-  },
-]);
+    basename: '/long-vuong-portfolio/',
+  }
+);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <RouterProvider router={router} />
