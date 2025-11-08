@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Chip, Container, Typography } from "@mui/material";
+import { Box, Chip, Typography, Button } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Link } from "react-router";
 
 type ProjectHeaderProps = {
   title: string;
@@ -14,12 +16,14 @@ const ProjectHeader = ({
 }: ProjectHeaderProps): React.ReactNode => {
   return (
     <Box className="mb-1 p-8 bg-white/5 backdrop-blur-sm rounded-2xl">
-      <Typography
-        variant="overline"
-        className="text-sky-800! tracking-widest! mb-4! block!"
+      <Button
+        component={Link}
+        to="/"
+        startIcon={<ArrowBackIosNewIcon fontSize="small" />}
+        className="mb-4! border-gray-300/30! text-sky-800! hover:bg-white/8! transition-colors!"
       >
-        PROJECT
-      </Typography>
+        Home
+      </Button>
 
       <Typography
         variant="h1"
