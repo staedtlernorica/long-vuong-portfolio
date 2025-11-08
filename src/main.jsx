@@ -8,7 +8,6 @@ import Portfolio from './pages/landing_page/LandingPage';
 import EnergyAnalysis from './pages/projects/energy_analysis/EnergyAnalysis';
 import GA4Migration from './pages/projects/ga4_migration/GA4Migration';
 import MeetupArchival from './pages/projects/meetup_archival/MeetupArchival';
-// Supports weights 200-900
 import '@fontsource-variable/nunito';
 
 const theme = createTheme({
@@ -42,7 +41,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/long-vuong-portfolio/',
+    basename: import.meta.env.DEV ? '/' : '/long-vuong-portfolio/',
   }
 );
 
