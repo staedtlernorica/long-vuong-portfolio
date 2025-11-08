@@ -6,7 +6,7 @@ import { Typography, Box, Container } from "@mui/material";
 
 export default function Portfolio() {
   return (
-    <Container className="font-serif mt-8 md:mt-15 mb-10 md:mb-20 flex flex-col items-center px-4 md:px-8">
+    <Container className="mt-8 md:mt-15 mb-10 md:mb-20 flex flex-col items-center px-4 md:px-8">
       <Typography variant="h4" className="my-8 md:my-15 text-center">
         Featured Projects
       </Typography>

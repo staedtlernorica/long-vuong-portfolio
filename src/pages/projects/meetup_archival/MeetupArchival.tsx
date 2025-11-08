@@ -7,7 +7,7 @@ const MeetupArchival = () => {
     header: "Project Overview",
     description:
       "This project involves the development of a Python-based web scraper designed to archive event data from Meetup.com. The archived data is intended for research and analysis purposes, allowing users to study trends and patterns in community events over time.",
-    imageUrl: "/images/projects/meetup_archival/overview.png",
+    imageUrl: "/assets/card.jpg",
   };
 
   const section2 = [

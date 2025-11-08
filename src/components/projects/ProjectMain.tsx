@@ -21,7 +21,7 @@ const ProjectMain = ({
   section3,
 }: ProjectMainProps): React.ReactNode => {
   return (
-    <Box className="mb-3 border-2 border-gray-300 rounded-xl p-5">
+    <Box className="mb-8 p-8 pt-2 bg-white/5 backdrop-blur-sm rounded-2xl border border-gray-300/30 shadow-lg">
       {section1 && (
         <MainSection1
           header={section1.header}
@@ -29,8 +29,12 @@ const ProjectMain = ({
           imageUrl={section1.imageUrl}
         />
       )}
-      {section2 && <MainSection2 sectionProps={section2.sectionProps} />}
-      {section3 && <MainSection3 sectionProps={section3.sectionProps} />}
+      <Box className="my-12">
+        {section2 && <MainSection2 sectionProps={section2.sectionProps} />}
+      </Box>
+      <Box className="mt-12">
+        {section3 && <MainSection3 sectionProps={section3.sectionProps} />}
+      </Box>
     </Box>
   );
 };
