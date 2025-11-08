@@ -1,4 +1,4 @@
-import { Card, Chip, Container, Box, CardActionArea } from "@mui/material";
+import { Card, Chip, Box } from "@mui/material";
 import { Link } from "react-router";
 import { Typography } from "@mui/material";
 
