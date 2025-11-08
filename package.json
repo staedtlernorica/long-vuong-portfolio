@@ -1,7 +1,7 @@
 {
   "name": "my-react-app",
   "type": "module",
-  "homepage": "https://<username>.github.io/<repo-name>",
+  "homepage": "https://staedtlernorica.github.io/long-vuong-portfolio/",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
