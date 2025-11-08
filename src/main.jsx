@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import './styles/styles.css';
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 
@@ -16,34 +16,29 @@ const theme = createTheme({
   },
 });
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      Component: Portfolio,
-    },
-    {
-      path: '/projects',
-      children: [
-        {
-          path: 'energy-analysis',
-          Component: EnergyAnalysis,
-        },
-        {
-          path: 'ga4-migration',
-          Component: GA4Migration,
-        },
-        {
-          path: 'meetup-archival',
-          Component: MeetupArchival,
-        },
-      ],
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: import.meta.env.DEV ? '/' : '/long-vuong-portfolio/',
-  }
-);
+    path: '/',
+    Component: Portfolio,
+  },
+  {
+    path: '/projects',
+    children: [
+      {
+        path: 'energy-analysis',
+        Component: EnergyAnalysis,
+      },
+      {
+        path: 'ga4-migration',
+        Component: GA4Migration,
+      },
+      {
+        path: 'meetup-archival',
+        Component: MeetupArchival,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
