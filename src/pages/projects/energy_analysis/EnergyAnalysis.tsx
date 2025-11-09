@@ -1,36 +1,36 @@
-import React from "react";
-import { Container } from "@mui/material";
-import ProjectHeader from "../../../components/projects/ProjectHeader";
-import ProjectMain from "../../../components/projects/ProjectMain";
+import React from 'react';
+import { Container } from '@mui/material';
+import ProjectHeader from '../../../components/projects/ProjectHeader';
+import ProjectMain from '../../../components/projects/ProjectMain';
 
 const EnergyAnalysis = () => {
   const section1 = {
-    header: "Energy Analysis Overview",
+    header: 'Background',
     description:
-      "This project focuses on analyzing energy consumption patterns using advanced data analytics techniques. The goal is to identify opportunities for energy savings and optimize usage across various sectors.",
-    imageUrl: "/images/projects/energy_analysis/overview.png",
+      'This project came about because I had a hard time determining the most cost effective electricity plan for myself. While my utility provider had an impressive suite of dashboards on usage and cost, the limited time frame that the dashboard covers limits their usability in finding an answer to my question. In addition, my utility provider does not make any reccomendations, or even summaries from which I could make conclusions (I suspect due to liabity reasons).\n\nFortunately, my utlity provider also provides Green Button data, which with a ETL pipeline was transformed into data that can provide an answer.',
+    // imageUrl: '/images/projects/energy_analysis/overview.png',
   };
 
   const section2 = [
     {
-      header: "Analysis Techniques",
+      header: 'Data Into Insights',
       description:
-        "1. Data collection from smart meters and IoT devices.\n2. Statistical analysis to identify consumption trends.\n3. Machine learning models to predict future energy needs.",
+        'To turn Green Button data into actionable insights, my project needed to:\n\n1. Cover a longer time frame to accurately identify trends and eliminate variance.\n2. Present users with visualizations and analysis using this longer time frame, and make effective summaries.',
     },
   ];
 
   const section3 = [
     {
-      header: "Technologies Used",
+      header: 'Technologies Used',
       description:
-        "The project utilizes Python for data analysis, leveraging libraries such as Pandas, NumPy, and Scikit-learn. Visualization tools like Matplotlib and Seaborn are used to present findings effectively.",
+        'The project utilizes Python for data analysis, leveraging libraries such as Pandas, NumPy, and Scikit-learn. Visualization tools like Matplotlib and Seaborn are used to present findings effectively.',
     },
   ];
   const mainHeader = {
-    title: "Energy Analysis",
-    tags: ["Data Analytics", "Energy Consumption", "Machine Learning"],
+    title: 'Energy Analysis',
+    tags: ['Python', 'Pandas', 'SQL', 'Flask', 'JavaScript', 'ETL', 'Plotly', 'Data Viz'],
     description:
-      "A project dedicated to analyzing energy consumption patterns to identify savings opportunities and optimize usage.",
+      'Visualizing the cost of different electricity plans with real usage data + identifying saving opportunities.  ',
   };
 
   return (

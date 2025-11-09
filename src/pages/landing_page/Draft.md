@@ -35,3 +35,9 @@ RESULT
 A SQL table with all events, and each event's metadata for archival and analysis purposes.
 
 IMPROVEMENTS
+
+=========================================================================
+
+Energy Cost Breakdown
+
+Python Pandas SQL Flask JS ETL Plotly Data Viz
