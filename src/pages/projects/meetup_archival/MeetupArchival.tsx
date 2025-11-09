@@ -46,7 +46,7 @@ const MeetupArchival = () => {
       description:
         // "The part of my script that extracts event metadata needed minimal modification to extract all event metadata it hadn't captured before.\n\nThe new, BIG challenge was in: how to collect the URL for ALL event pages from a group so that my metadata extraction script can run on these pages. The method I used for my own data involved manual scrolling to the bottom; this was not feasible for groups with hundreds or thousands of events. This is where automation enters the picture.",
         "A second challenge arose in ensuring the metadata extraction script could handle the increased volume. If implemented as is, the script would extract and store the metadata in RAM (or colloquially 'memory'), and only saving this data to file once it has finishes with the last event.\n\n However, any network interruption, network error or site glitches, would cause the program to crash, erasing all information about the extracted metadata in the RAM. Sometimes, the program may also crash itself to the same end.\n\n",
-      innerTextHeader: 'Solution:',
+      innerTextHeader: 'Solution',
       innerTextDescription:
         "I divided the extraction process into batches, where after every 200 events, the script saves all extracted metadata to a PostgreSQL table called 'events_metada'. This way, even there were crashes, only the last batch of events' are lost, rather than all extracted data.",
       innerTextIcon: <AutoFixHighIcon />,
