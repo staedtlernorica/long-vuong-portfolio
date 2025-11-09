@@ -27,7 +27,7 @@ const MeetupArchival = () => {
   const improvementsSection: Section[] = [
     {
       header: 'Future Improvements',
-      description: '1. Implement the archival of all media (comments, videos, pictures). \n2. ...',
+      description: '1. Implement the archival of all media (comments, videos, pictures).',
       headerIcon: <ConstructionIcon />,
     },
   ];
