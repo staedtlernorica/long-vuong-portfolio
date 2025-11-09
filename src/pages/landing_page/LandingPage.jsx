@@ -1,8 +1,8 @@
-import ArchiveIcon from "@mui/icons-material/Archive";
-import SystemUpdateAltRoundedIcon from "@mui/icons-material/SystemUpdateAltRounded";
-import ProjectCard from "../../components/projects/ProjectCard";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import { Typography, Box, Container } from "@mui/material";
+import ArchiveIcon from '@mui/icons-material/Archive';
+import SystemUpdateAltRoundedIcon from '@mui/icons-material/SystemUpdateAltRounded';
+import ProjectCard from '../../components/projects/ProjectCard';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import { Typography, Box, Container } from '@mui/material';
 
 export default function Portfolio() {
   return (
@@ -16,32 +16,25 @@ export default function Portfolio() {
           name="Automated Meetup Archiver"
           description="Automated data harvester built with Selenium and BS4 that archive all past events from a Meetup group, and extracts structured details (e.g. date, attendees, location) into SQL tables."
           icon={<ArchiveIcon />}
-          tags={[
-            "ETL",
-            "Python",
-            "Selenium",
-            "Web Scraping",
-            "PostgreSQL",
-            "BeautifulSoup4 (BS4)",
-          ]}
+          tags={['ETL', 'Python', 'Selenium', 'Web Scraping', 'PostgreSQL', 'BeautifulSoup4 (BS4)']}
           link="/projects/meetup-archival"
           linkText="View Project"
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           name="Google Analytics 4 Tags Migration"
           description="Integrated Google Analytics 4 tags into Google Tag Manager, ensuring continuity of tracking and privacy compliance with minimal disruption for enteprise clients."
           icon={<SystemUpdateAltRoundedIcon />}
           tags={["GA4", "GTM", "Privacy Compliance"]}
           link="/projects/ga4-migration"
           linkText="View Case Study"
-        />
+        /> */}
 
         <ProjectCard
           name="Energy Price Visualizer"
           description="Data visualization tool to help users compare electricity prices based on their daily usage data."
           icon={<PaymentsIcon />}
-          tags={["Python", "Plotly", "Pandas", "Data Viz", "SQL", "ETL"]}
+          tags={['Python', 'Plotly', 'Pandas', 'Data Viz', 'SQL', 'ETL']}
           link="/projects/energy-analysis"
           linkText="View Case Study"
         />
