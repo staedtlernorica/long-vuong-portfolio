@@ -1,14 +1,25 @@
 import ReactDOM from 'react-dom/client';
 import './styles/styles.css';
-import { createHashRouter } from 'react-router';
+import { createHashRouter, useLocation } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-
+import { useEffect } from 'react';
 import Portfolio from './pages/landing_page/LandingPage';
 import EnergyAnalysis from './pages/projects/energy_analysis/EnergyAnalysis';
 import GA4Migration from './pages/projects/ga4_migration/GA4Migration';
 import MeetupArchival from './pages/projects/meetup_archival/MeetupArchival';
 import '@fontsource-variable/nunito';
+import BackgroundScatter from './components/Background.jsx';
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const theme = createTheme({
   typography: {
@@ -19,22 +30,46 @@ const theme = createTheme({
 const router = createHashRouter([
   {
     path: '/',
-    Component: Portfolio,
+    element: (
+      <>
+        <ScrollToTop />
+        <BackgroundScatter />
+        <Portfolio />
+      </>
+    ),
   },
   {
     path: '/projects',
     children: [
       {
         path: 'energy-analysis',
-        Component: EnergyAnalysis,
+        element: (
+          <>
+            <ScrollToTop />
+            <BackgroundScatter />
+            <EnergyAnalysis />,
+          </>
+        ),
       },
       {
         path: 'ga4-migration',
-        Component: GA4Migration,
+        element: (
+          <>
+            <ScrollToTop />
+            <BackgroundScatter />
+            <GA4Migration />,
+          </>
+        ),
       },
       {
         path: 'meetup-archival',
-        Component: MeetupArchival,
+        element: (
+          <>
+            <ScrollToTop />
+            <BackgroundScatter />
+            <MeetupArchival />,
+          </>
+        ),
       },
     ],
   },
@@ -43,6 +78,6 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <RouterProvider router={router} />
+    <RouterProvider router={router}></RouterProvider>
   </ThemeProvider>
 );
