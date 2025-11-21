@@ -33,7 +33,7 @@ const router = createHashRouter([
     element: (
       <>
         <ScrollToTop />
-        <BackgroundScatter />
+        {/* <BackgroundScatter /> */}
         <Portfolio />
       </>
     ),
@@ -46,7 +46,7 @@ const router = createHashRouter([
         element: (
           <>
             <ScrollToTop />
-            <BackgroundScatter />
+            {/* <BackgroundScatter /> */}
             <EnergyAnalysis />,
           </>
         ),
@@ -56,7 +56,7 @@ const router = createHashRouter([
         element: (
           <>
             <ScrollToTop />
-            <BackgroundScatter />
+            {/* <BackgroundScatter /> */}
             <GA4Migration />,
           </>
         ),
@@ -66,7 +66,7 @@ const router = createHashRouter([
         element: (
           <>
             <ScrollToTop />
-            <BackgroundScatter />
+            {/* <BackgroundScatter /> */}
             <MeetupArchival />,
           </>
         ),
