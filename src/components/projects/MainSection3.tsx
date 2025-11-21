@@ -30,7 +30,7 @@ const MainSection3 = ({ sectionProps }: MainSection3Props) => {
               }}
             >
               <Box className="flex items-start gap-4">
-                <Box className="shrink-0">
+                <Box className="shrink-0" sx={{ display: { xs: 'none', sm: 'block' } }}>
                   <Box className="w-12 h-12 rounded-full bg-sky-400 text-white flex items-center justify-center font-semibold shadow-md">
                     {subSection.headerIcon ? subSection.headerIcon : index + 1}
                   </Box>
@@ -60,7 +60,7 @@ const MainSection3 = ({ sectionProps }: MainSection3Props) => {
                   {subSection.innerTextHeader && (
                     <Box className="flex items-start gap-4 pt-4 p-6 rounded-xl border border-gray-300/40 transition-transform duration-200 hover:-translate-y-2 shadow-md">
                       {subSection.innerTextIcon && (
-                        <Box className="shrink-0">
+                        <Box className="shrink-0" sx={{ display: { xs: 'none', sm: 'block' } }}>
                           <Box className="w-12 h-12 rounded-full bg-sky-400 text-white flex items-center justify-center font-semibold shadow-md">
                             {subSection.innerTextIcon}
                           </Box>
